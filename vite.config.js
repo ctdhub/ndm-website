@@ -6,6 +6,12 @@ export default defineConfig({
   plugins: [vue()],
   base: '',
   build: {
-    outDir: 'docs'
+    outDir: 'docs',
+    rollupOptions: {
+      input: {
+        main: './index.html',
+        nested: './nested/index.html'
+      }
+    }
   }
 })
