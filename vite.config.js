@@ -10,7 +10,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html',
-        nested: './nested/index.html'
+        giving: './src/pages/giving.html'
       }
     }
   }
