@@ -12,7 +12,7 @@ const Livestream = () => import('./components/views/Livestream.vue')
 const Visitors = () => import('./components/views/Visitors.vue')
 
 const routes = [
-  { path: '/', redirect: to => 'home' },
+  { path: '/', component: Home },
   { path: '/home', component: Home },
   { path: '/about', component: About },
   { path: '/beliefs', component: Beliefs },
