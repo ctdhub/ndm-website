@@ -11,7 +11,9 @@
     import NavBar from './components/layout/NavBar.vue'
     import MobileNavBar from './components/layout/MobileNavBar.vue'
 
-    function onScroll(e) {
+    let changing = false;
+        
+    async function onScroll(e) {
         const navContainer = document.getElementById("nav-container");
         const menuIcon = document.getElementById("open-menu-icon");
         const menu = document.querySelector('.menu-btn');
@@ -20,17 +22,22 @@
         if(navContainer && menuIcon && menu && logo) {
             if(e.target.scrollTop > 75) {
                 navContainer.style.backgroundColor = "white"
-                navContainer.classList.add("dark")
-                logo.style.color = "black"
-                menu.style.color = "black"
+                navContainer.style.height = "60px"
+                if(!navContainer.classList.contains('dark')) {
+                    navContainer.classList.add("dark")
+                    logo.style.color = "black"
+                    menu.style.color = "black"
+                }
             } else {
                 navContainer.style.backgroundColor = "transparent"
-                navContainer.classList.remove("dark")
-                logo.style.color = "white"
-                menu.style.color = "white"
+                navContainer.style.height = "75px"
+                if(navContainer.classList.contains('dark')) {
+                    navContainer.classList.remove("dark")
+                    logo.style.color = "white"
+                    menu.style.color = "white"
+                }
             }
         }
-
     }
 
     function toggleMobileMenu() {

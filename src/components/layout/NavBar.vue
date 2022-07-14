@@ -1,16 +1,16 @@
 <template>
     <div id="nav-container">
         <div class="logo" @click="navigateToLink('home')">
-            <img :src="ndmLogo" style="height: 20px"/>
+            <img :src="ndmLogo" style="height: 25px; margin-right: 5px;"/>
             <span>NDM</span>
         </div>
         <button class="menu-btn" @click="toggleMobileMenu()" style="color: white;">
             <i id="open-menu-icon" class="fa fa-bars"></i>
         </button>
         <div class="links">
-            <button :class="{ target: isTarget('/home') }" @click="navigateToLink('home')">Home</button>
+            <button :class="{ target: isTarget(['/home', '/']) }" @click="navigateToLink('home')">Home</button>
             <div class="dropdown">
-                <button :class="{ target: isTarget('/about') }" @click="navigateToLink('about')">
+                <button :class="{ target: isTarget(['/about']) }" @click="navigateToLink('about')">
                     <span>About Us</span>
                     <i style="font-size: 0.6rem; padding-left: 5px;" class="fa fa-chevron-down"></i>
                 </button>
@@ -20,9 +20,9 @@
                     <a @click="navigateToLink('directions')">Directions</a>
                 </div>
             </div>
-            <button :class="{ target: isTarget('/visitors') }" @click="navigateToLink('visitors')">Visitors</button>
-            <button :class="{ target: isTarget('/giving') }" @click="navigateToLink('giving')">Giving</button>
-            <button :class="{ target: isTarget('/livestream') }" @click="navigateToLink('livestream')">Live</button>
+            <button :class="{ target: isTarget(['/visitors']) }" @click="navigateToLink('visitors')">Visitors</button>
+            <button :class="{ target: isTarget(['/giving']) }" @click="navigateToLink('giving')">Giving</button>
+            <button :class="{ target: isTarget(['/livestream']) }" @click="navigateToLink('livestream')">Live</button>
         </div>
     </div>
 </template>
@@ -45,8 +45,16 @@
         emit('toggleMenu')
     }
 
-    function isTarget(r) {
-        return route.path == r
+    function isTarget(routes) {
+        if(routes.length) {
+            for(let r of routes) {
+                if(route.path == r) {
+                    return true
+                }
+            }
+
+            return false
+        }
     }
 
     onMounted(() => {
@@ -70,6 +78,8 @@
         cursor: pointer;
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
         margin-top: 4px;
         margin-right: 3rem;
         color: white;
@@ -199,18 +209,6 @@
     }
 
     @media only screen and (max-width: 600px) {
-        .a {
-            font-size: 2rem;
-        }
-
-        .b, .c {
-            font-size: 0.8rem;
-        }
-
-        .btn-y {
-            margin-right: 1rem;
-        }
-
         #nav-container {
             z-index: 5;
             display: flex;

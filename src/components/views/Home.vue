@@ -35,9 +35,9 @@
                 <i class="fa fa-long-arrow-alt-right"></i>
             </button>
         </div>
-        <div class="img-container ease-up-animation">
+        <!-- <div class="img-container ease-up-animation">
             <img class="bio-img" :src="churchIn" />
-        </div>
+        </div> -->
     </div>
     <div class="section-3">
         <div class="sec3-hdr">
@@ -108,12 +108,14 @@
             }
             // find new word
             while(true) {
-                let newIdx = Math.floor(Math.random() * words.length)
-                if(newIdx != prevIdx) {
-                    prevIdx = newIdx
-                    newWord = words[newIdx]
-                    break
-                }
+                let newIdx = 5; //Math.floor(Math.random() * words.length)
+                newWord = words[newIdx]
+                break;
+                // if(newIdx != prevIdx) {
+                //     prevIdx = newIdx
+                //     newWord = words[newIdx]
+                //     break
+                // }
             }
             // wait
             await new Promise(r=>{setTimeout(()=>{r()},1000)})
@@ -145,49 +147,37 @@
 
     .section-2 {
         display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: white;
         min-height: 90vh;
-        padding: 2rem;
+        width: 100%;
+        padding: 6rem;
     }
 
     .section-item-container {
-        padding: 1rem 0.5rem;
+        padding: 5em;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        width: 50vw;
+        background-color: #f3e5eb;
+        border-radius: 5px;
+        align-items: baseline;
     }
 
     .section-header {
-        font-size: 1.5rem;
+        font-size: 2em;
         font-weight: 600;
-        text-align: center;
-        letter-spacing: 0.2rem;
         color: #7c1c45;
-        margin: 2rem 0;
         position: relative;
     }
 
-    .section-header::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        border-radius: 2px;
-        height: 0.4em;
-        background-color: #dbaccf;
-        opacity: 0.25;
-    }
-
     .section-text {
-        line-height: 1.5rem;
-        width: 75%;
-        padding: 2rem;
+        line-height: 2em;
+        margin: 2em 0;
     }
 
     .img-container {
-        margin: auto;
+        margin: auto 0;
         position: relative;
         overflow: hidden;
         transition: transform 300ms ease-in-out;
@@ -225,19 +215,17 @@
 
     .site-text {
         align-self: center;
-        margin: 7rem 0;
+        margin: 5rem 1rem 3rem 1rem;
         display: flex;
         flex-direction: column;
     }
     
     .buttons {
         justify-content: center;
-        margin-bottom: 3rem;
+        margin-bottom: 5rem;
         display: flex;
         flex-direction: row;
-        flex-flow: wrap;
         position: relative;
-        width: 75%;
         animation-name: ease-up;
         animation-timing-function: ease;
         animation-fill-mode: forwards;
@@ -251,7 +239,8 @@
         text-align: center;
         font-size: 2.5rem;
         font-weight: 600;
-        letter-spacing: 5px;
+        letter-spacing: 1px;
+        margin-bottom: 3rem;
         position: relative;
         animation-name: fade-white;
         animation-timing-function: ease;
@@ -269,6 +258,7 @@
         color: transparent;
         padding: 5px 7px;
         position: relative;
+        text-align: center;
         animation-name: fade-white;
         animation-timing-function: ease;
         animation-fill-mode: forwards;
@@ -286,6 +276,7 @@
         color: transparent;
         padding: 5px 7px;
         position: relative;
+        text-align: center;
         animation-name: fade-white;
         animation-timing-function: ease;
         animation-fill-mode: forwards;
@@ -301,21 +292,18 @@
         outline: none;
         border: 2px solid white;
         border-radius: 2px;
-        margin-top: 2rem;
-        margin-right: 1rem;
-        padding: 0.75rem 2rem;
+        padding: 0.85rem 2rem;
+        margin: 0 2rem 0 0;
         font-size: 0.8rem;
         cursor: pointer;
         background-color: white;
         color: black;
         font-weight: bold;
-        transition: 200ms ease-in;
+        transition: opacity 200ms ease-in;
     }
 
     .btn-x:hover {
-        border: 2px solid white;
-        background-color: #bbbbbb;
-        color: white;
+        opacity: 0.8;
     }
 
     .btn-y {
@@ -326,19 +314,18 @@
         outline: none;
         border: 1.5px solid white;
         border-radius: 2px;
-        margin-top: 2rem;
-        padding: 0.75rem 2rem;
+        padding: 0.85rem 2rem;
         font-size: 0.8rem;
         cursor: pointer;
         background-color: transparent;
+        opacity: 1;
         color: white;
         font-weight: bold;
-        transition: 200ms ease-in;
+        transition: opacity 200ms ease-in;
     }
 
     .btn-y:hover {
-        background-color: white;
-        color: blue;
+        opacity: 0.5;
     }
 
     .btn {
@@ -347,22 +334,19 @@
         align-items: flex-end;
         position: relative;
         outline: none;
-        border: 2px solid #7c1c45;
+        border: none;
         border-radius: 2px;
-        margin: 2rem;
-        padding: 0.75rem 2rem;
-        font-size: 0.8rem;
+        padding: 0.75em 2em;
+        font-size: 0.8em;
         cursor: pointer;
-        background-color: white;
-        color: black;
+        background-color: #7c1c45;
+        color: white;
         font-weight: bold;
         transition: 200ms ease-in;
     }
 
     .btn:hover {
-        /* border-color: transparent; */
-        background-color: #7c1c45;
-        color: white;
+        background-color: #924264;
     }
 
     .section-3 {
@@ -370,7 +354,7 @@
         flex-direction: column;
         background-color: #eaeaf6;
         min-height: 400px;
-        padding: 8rem 2rem;
+        padding: 6em;
     }
 
     .sec3-hdr {
@@ -399,9 +383,8 @@
     .card-container {
         display: flex;
         flex-direction: row;
-        flex-flow: wrap;
         padding: 1rem;
-        padding: 5rem 0;
+        padding: 5rem 0 0 0;
     }
     
     .card {
@@ -509,6 +492,18 @@
             flex-basis: 51%;
             margin: 0  0 1rem 0;
         }
+
+        .buttons {
+            flex-direction: column;
+        }
+
+        .bc {
+            flex-direction: column;
+        }
+
+        .btn-x {
+            margin: 0 0 1rem 0;
+        }
     }
 
     @media only screen and (max-width: 800px) {
@@ -518,6 +513,10 @@
 
         .section-item-container {
             width: initial;
+        }
+
+        .card-container {
+            flex-direction: column;
         }
     }
 

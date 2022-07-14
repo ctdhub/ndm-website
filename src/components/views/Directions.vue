@@ -24,6 +24,11 @@
                 <li>5350 DENLINGER RD is on the LEFT (your destination is just past BLOOMFIELD DR, if you reach BERQUIST DR you've gone a little too far)</li>
             </ul>
         </div>
+        <div class="marker-wrapper">
+            <div class="marker">
+                <i class="fa fa-map-marker-alt"></i>
+            </div>
+        </div>
         <div class="map">
             <div class="map-desc">Service begins Sunday at 10:30am est.</div>
             <iframe src="https://maps.google.com/maps?q=5350+Denlinger+Road,+Trotwood,+OH,+USA&output=embed" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -55,7 +60,7 @@
         display: flex;
         flex-direction: row;
         flex-flow: wrap;
-        padding: 4rem 0;
+        padding: 6em;
         align-items: center;
         justify-content: center;
     }
@@ -121,5 +126,23 @@
         height: 100%;
         opacity: 0.6;
         background-image: linear-gradient(#6b0e3a, #793354);
+    }
+
+    .marker-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-basis: 100%;
+    }
+
+    .marker {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f3e5eb;
+        color: #a83165;
+        height: 6vw;
+        width: 6vw;
+        font-size: 2.5vw;
+        border-radius: 50%;
     }
 </style>

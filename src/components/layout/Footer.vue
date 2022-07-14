@@ -3,16 +3,16 @@
         <div class="service-times">Service Times</div>
         <div class="day-ndm">
             <span>Sunday</span>
-            <span> || </span>
+            <span> • </span>
             <span style="color: #caafba;">Morning Worship</span>
-            <span> || </span>
+            <span> • </span>
             <span>10:30am est.</span>
         </div>
         <div class="day-ndm">
             <span>Wednesday</span>
-            <span> || </span>
+            <span> • </span>
             <span style="color: #caafba;">Bible Study</span>
-            <span> || </span>
+            <span> • </span>
             <span>7:00pm est.</span>
         </div>
         <div class="day-ndm" style="margin-top: 4rem;"></div>
@@ -20,11 +20,20 @@
     </div>
     <div class="cpyr">
         <span>© 2022 New Destiny Ministries</span>
-        <span style="color: #9f9f9f">#ndmstrong</span>
+        <div>
+            <i class="fab fa-facebook-f fb-icon" @click="gotoFacebook"></i>
+            <span style="color: #9f9f9f; margin-left: 1em;">#ndmstrong</span>
+        </div>
     </div>
 </template>
 
 <script setup>
+    function gotoFacebook() {
+        window.open(
+            'https://www.facebook.com/pages/category/Religious-organization/New-Destiny-Ministries-115824295104790/',
+            '_blank'
+            )
+    }
 </script>
 
 <style scoped>
@@ -68,5 +77,14 @@
         padding: 1.5rem 4rem;
         font-size: 0.9rem;
         color: white;
+    }
+
+    .fb-icon {
+        cursor: pointer;
+        transition: opacity 200ms ease-in;
+    }
+
+    .fb-icon:hover {
+        opacity: 0.8;
     }
 </style>
