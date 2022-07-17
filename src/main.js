@@ -26,6 +26,9 @@ const routes = [
 const router = createRouter({
     history: createWebHashHistory(),
     routes,
+    scrollBehavior(to, from, savedPosition) {
+      document.getElementById('app').scrollTop = 0;
+    },
   })
 
 const app = createApp(App)

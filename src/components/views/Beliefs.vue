@@ -95,8 +95,7 @@
         color: white;
         text-align: center;
         font-size: 2rem;
-        font-weight: 600;
-        letter-spacing: 0.25rem;
+        font-weight: 700;
         position: relative;
         animation-name: fade-white;
         animation-timing-function: ease;

@@ -51,8 +51,8 @@
                 <div class="give-b">
                     <div>
                         <i class="check-icon fa fa-check"></i>
-                        <span>Give via</span>
-                        <a href="https://cash.app/$NDMDayton" class="g-link"> Cash App,</a>
+                        <span>Give via </span>
+                        <a href="https://cash.app/$NDMDayton" class="g-link">Cash App</a>
                         <span> or by searching "NDMDayton" inside the mobile CashApp application.</span>
                     </div>
                     <div>
@@ -69,8 +69,8 @@
                 <div class="give-b">
                     <div>
                         <i class="check-icon fa fa-check"></i>
-                        <span>Give via</span>
-                        <a href="https://paypal.me/ndmdayton" class="g-link"> PayPal</a>
+                        <span>Give via </span>
+                        <a href="https://paypal.me/ndmdayton" class="g-link">PayPal</a>
                     </div>
                     <div>
                         <i class="check-icon fa fa-check"></i>
@@ -229,8 +229,7 @@
         color: white;
         text-align: center;
         font-size: 2rem;
-        font-weight: 600;
-        letter-spacing: 0.25rem;
+        font-weight: 700;
         position: relative;
         animation-name: fade-white;
         animation-timing-function: ease;
@@ -281,8 +280,8 @@
         width: 100%;
         text-align: center;
         padding: 4rem 20vw;
-        line-height: 1.5rem;
-        color: grey;
+        line-height: 2rem;
+        color: black;
         font-size: 1.1rem;
         padding-top: 0;
     }
@@ -307,7 +306,8 @@
         color: #334e68;
         text-align: center;
         font-size: 1.25rem;
-        font-weight: bold
+        font-weight: bold;
+        margin-bottom: 10px;
     }
 
     .give-tab-container {
@@ -391,12 +391,14 @@
     }
 
     .g-link {
-        color: #3a6eff;
+        color: #0078ff;
+        cursor: pointer;
         transition: 200ms ease-in;
+        text-decoration: none;
     }
 
     .g-link:hover {
-        color:rgb(34, 34, 34);
+        color: #003c7e;
     }
 
     .give-hdr {
@@ -429,7 +431,7 @@
         text-align: center;
         display: flex;
         flex-direction: column;
-        color: #646464;
+        color: black;
     }
 
     .give-b div {

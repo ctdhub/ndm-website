@@ -3,7 +3,7 @@
         <div class="overlay"></div>
         <div class="a">About Us</div>
         <div class="a-sub ease-right-animation">
-            <span>Do you Want to Learn More About New Destiny?</span>
+            <span>Do you Want to Learn More About New Destiny Ministries?</span>
         </div>
         <button class="btn b-main ease-left-animation" @click="navigateToLink('leadership')">
             <span style="margin-right: 10px;">Leadership</span>
@@ -124,7 +124,7 @@
     .btn {
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
         position: relative;
         outline: none;
         border: 1.5px solid;

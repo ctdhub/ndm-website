@@ -20,10 +20,8 @@
     </div>
     <div class="cpyr">
         <span>© 2022 New Destiny Ministries</span>
-        <div>
-            <i class="fab fa-facebook-f fb-icon" @click="gotoFacebook"></i>
-            <span style="color: #9f9f9f; margin-left: 1em;">#ndmstrong</span>
-        </div>
+        <span style="color: #9f9f9f;">#ndmstrong</span>
+        <i class="fab fa-facebook-f fb-icon" @click="gotoFacebook"></i>
     </div>
 </template>
 
@@ -86,5 +84,17 @@
 
     .fb-icon:hover {
         opacity: 0.8;
+    }
+
+    @media only screen and (max-width: 650px) {
+        .cpyr {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .cpyr span,  .cpyr i {
+            margin: 0;
+            padding: 5px 0;
+        }
     }
 </style>

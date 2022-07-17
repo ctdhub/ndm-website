@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="map">
-            <div class="map-desc">Service begins Sunday at 10:30am est.</div>
+            <div class="map-desc">Service begins Sunday @ 10:30am est.</div>
             <iframe src="https://maps.google.com/maps?q=5350+Denlinger+Road,+Trotwood,+OH,+USA&output=embed" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
     </div>
@@ -58,19 +58,16 @@
     }
     .section-2 {
         display: flex;
-        flex-direction: row;
-        flex-flow: wrap;
-        padding: 6em;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding: 4rem 0;
     }
 
     .sub-section {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        flex-basis: 40%;
-        padding: 2rem;
+        padding: clamp(1rem, calc(5vw + 1rem), 2rem);
     }
 
     .a {
@@ -79,8 +76,7 @@
         color: white;
         text-align: center;
         font-size: 2rem;
-        font-weight: 600;
-        letter-spacing: 0.25rem;
+        font-weight: 700;
         position: relative;
         animation-name: fade-white;
         animation-timing-function: ease;
@@ -88,30 +84,32 @@
     }
 
     .sub {
-        font-size: 1.25rem;
-        color: gray;
-        text-decoration: underline;
+        font-size: 1.5em;
+        font-weight: 700;
+        color: #102a43;
     }
     
     ul {
-        width: 50vw;
         padding: 1rem;
     }
 
     li {
-        margin-bottom: 1rem;
+        margin-bottom: 0.25rem;
+        color: #646464;
     }
 
     .map {
         border-radius: 3px;
-        flex: 0.85 1 40%;
-        padding: 0.5rem;
+        padding: clamp(1rem, calc(5vw + 1rem), 2rem);
+        width: 100%;
     }
 
     .map-desc {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: #102a43;
+        margin: 1rem;
         text-align: center;
-        padding: 1rem;
-        font-weight: bold;
     }
 
     @keyframes fade-white {
@@ -131,7 +129,6 @@
     .marker-wrapper {
         display: flex;
         justify-content: center;
-        flex-basis: 100%;
     }
 
     .marker {
@@ -140,9 +137,9 @@
         align-items: center;
         background-color: #f3e5eb;
         color: #a83165;
-        height: 6vw;
-        width: 6vw;
-        font-size: 2.5vw;
+        height: 100px;
+        width: 100px;
+        font-size: 50px;
         border-radius: 50%;
     }
 </style>

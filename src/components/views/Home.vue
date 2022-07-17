@@ -17,11 +17,11 @@
         </div>
         <div class="buttons">
             <button class="btn-x" @click="navigateToLink('directions')">
-                <span style="margin-right: 10px;">Get Directions</span>
+                <span>Get Directions</span>
                 <i class="fa fa-directions"></i>
             </button>
             <button class="btn-y" @click="navigateToLink('livestream')">
-                <span style="margin-right: 10px;">Live Stream</span>
+                <span>Live Stream</span>
                 <i class="fa fa-long-arrow-alt-right"></i>
             </button>
         </div>
@@ -31,19 +31,27 @@
             <div class="section-header ease-up-animation">Welcome to New Destiny Ministries!</div>
             <span class="section-text">We certainly want to thank you for taking the time to come and visit with us. New Destiny Ministries is committed to fulfilling the great commission by reaching out to the lost with the saving Gospel of Jesus Christ through Holy Ghost anointed teaching and preaching. The focus of this ministry is to evangelize the unchurched while preparing the believer to live a victorious Christian life.</span>
             <button class="btn" @click="navigateToLink('about')">
-                <span style="margin-right: 10px;">About Us</span>
+                <span>About Us</span>
                 <i class="fa fa-long-arrow-alt-right"></i>
             </button>
         </div>
-        <!-- <div class="img-container ease-up-animation">
-            <img class="bio-img" :src="churchIn" />
-        </div> -->
+        <div class="scripture-container">
+            <div class="scripture-section">
+                <div class="slogan">"Moving Forward"</div>
+                <div class="give-scrip">" Brethren, I count not myself to have apprehended: but this one thing I do, forgetting those things which are behind, and reaching forth unto those things which are before, I press toward the mark for the prize of the high calling of God in Christ Jesus.</div>
+                <div class="scrip-f">Philippians 3:13-14</div>
+                <div class="scrip-v">KJV</div>
+            </div>
+            <div class="img-container ease-up-animation scripture-section">
+                <img class="bio-img" :src="churchIn" />
+            </div>
+        </div>
     </div>
     <div class="section-3">
         <div class="sec3-hdr">
             <span>Resources</span>
         </div>
-        <div class="resources">Check out a few Resources at NDM</div>
+        <div class="resources">Check out a few Resources at New Destiny Ministries</div>
         <div class="card-container">
             <div class="card" @click="navigateToLink('beliefs')">
                 <div class="overlay-gradient"></div>
@@ -108,14 +116,13 @@
             }
             // find new word
             while(true) {
-                let newIdx = 5; //Math.floor(Math.random() * words.length)
+                let newIdx = Math.floor(Math.random() * words.length)
                 newWord = words[newIdx]
-                break;
-                // if(newIdx != prevIdx) {
-                //     prevIdx = newIdx
-                //     newWord = words[newIdx]
-                //     break
-                // }
+                if(newIdx != prevIdx) {
+                    prevIdx = newIdx
+                    newWord = words[newIdx]
+                    break
+                }
             }
             // wait
             await new Promise(r=>{setTimeout(()=>{r()},1000)})
@@ -147,27 +154,29 @@
 
     .section-2 {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         background-color: white;
-        min-height: 90vh;
         width: 100%;
-        padding: 6rem;
+        padding: 4rem 0;
     }
 
     .section-item-container {
-        padding: 5em;
+        padding: clamp(1rem, calc(5vw + 1rem), 2rem);
         display: flex;
         flex-direction: column;
-        background-color: #f3e5eb;
+        background-color: transparent;
         border-radius: 5px;
-        align-items: baseline;
+        align-items: center;
+        text-align: center;
+        max-width: 1000px;
     }
 
     .section-header {
         font-size: 2em;
-        font-weight: 600;
-        color: #7c1c45;
+        font-weight: 700;
+        color: #102a43;
         position: relative;
     }
 
@@ -177,6 +186,9 @@
     }
 
     .img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin: auto 0;
         position: relative;
         overflow: hidden;
@@ -194,7 +206,6 @@
 
     .bio-img {
         height: auto;
-        width: 100%;
         transition: transform 300ms ease-in-out;
         max-height: 500px;
         border-radius: 5px;
@@ -238,8 +249,7 @@
         color: white;
         text-align: center;
         font-size: 2.5rem;
-        font-weight: 600;
-        letter-spacing: 1px;
+        font-weight: 700;
         margin-bottom: 3rem;
         position: relative;
         animation-name: fade-white;
@@ -287,7 +297,7 @@
     .btn-x {
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
         position: relative;
         outline: none;
         border: 2px solid white;
@@ -309,7 +319,7 @@
     .btn-y {
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
         position: relative;
         outline: none;
         border: 1.5px solid white;
@@ -331,12 +341,13 @@
     .btn {
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
         position: relative;
         outline: none;
         border: none;
         border-radius: 2px;
         padding: 0.75em 2em;
+        margin-bottom: 2rem;
         font-size: 0.8em;
         cursor: pointer;
         background-color: #7c1c45;
@@ -345,39 +356,78 @@
         transition: 200ms ease-in;
     }
 
+    .btn i, .btn-x i, .btn-y i {
+        opacity: 0;
+        transition: 100ms ease-in;
+    }
+
     .btn:hover {
         background-color: #924264;
+    }
+
+    .btn:hover i, .btn-x:hover i, .btn-y:hover i {
+        opacity: 1;
+        margin-left: 10px;
+    }
+
+    .slogan {
+        font-size: 2em;
+        font-weight: 700;
+        color: #797cce;
+        margin-bottom: 1em;
+    }
+
+    .give-scrip {
+        font-weight: bold;
+        color: #334e68;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    .give-quote {
+        color: #adb0ff;
+        font-size: 3rem;
+    }
+
+    .scrip-f {
+        display: block;
+        font-weight: bold;
+        padding-top: 1rem;
+        color: #797cce;
+    }
+
+    .scrip-v {
+        color: grey;
+        font-size: 0.8rem;
+    }
+
+    .scripture-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 5rem clamp(1rem, calc(5vw + 1rem), 2rem);
+        background-color: #f5f7ff;
+        max-width: 1500px;
+    }
+
+    .scripture-section {
+        width: 45%;
+        padding: 0 1em;
     }
 
     .section-3 {
         display: flex;
         flex-direction: column;
-        background-color: #eaeaf6;
         min-height: 400px;
-        padding: 6em;
+        padding: clamp(1rem, calc(5vw + 1rem), 2rem);
     }
 
     .sec3-hdr {
-        color: #7c1c45;;
+        color: #102a43;
         text-align: center;
         font-size: 2rem;
-        font-weight: bold;
-    }
-
-    .sec3-hdr span {
-        position: relative;
-    }
-
-    .sec3-hdr span::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        border-radius: 2px;
-        height: 0.4em;
-        background-color: #b0709f;
-        opacity: 0.25;
+        font-weight: 700;
     }
 
     .card-container {
@@ -517,6 +567,16 @@
 
         .card-container {
             flex-direction: column;
+        }
+
+        .scripture-container {
+            flex-direction: column;
+        }
+
+        .scripture-section {
+            padding: 0 1em;
+            text-align: center;
+            width: 80%;
         }
     }
 

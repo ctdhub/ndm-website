@@ -9,18 +9,14 @@
             <span>What to Expect at New Destiny Ministries?</span>
         </div>
         <div class="expect-desc ease-up-animation" style="animation-delay: 200ms;">Visiting a new church can be intimidating...What should I wear? When are the services? How do I get there?</div>
-        <div class="expect-desc ease-up-animation" style="animation-delay: 400ms;">We understand the many thoughts that can come from visiting a new church, so we want you to feel completely comfortable when you visit. Below are some frequently asked questions. If you have any additional questions, don't hesitate to contact us at contact@newdestinyministries.net.</div>
+        <div class="expect-desc ease-up-animation" style="animation-delay: 400ms;">We understand the many thoughts that can come from visiting a new church, so we want you to feel completely comfortable when you visit. Below are some frequently asked questions.</div>
     </div>
     <div class="section-3">
         <div class="faq">Frequently Asked Questions</div>
         <div class="q-wrapper" style="margin-top: 3rem;">
             <div class="pp-q">When are services?</div>
-            <div class="pp-a">- Sunday mornings at 10:30 a.m. est. via <a class="innerlink" @click="navigateToLink('livestream')">Livestream</a> and In-Person.</div>
-            <div class="pp-a">- Wednesdays evenings at 7:00 p.m. via our conference line.</div>
-        </div>
-        <div class="q-wrapper">
-            <div class="pp-q">Are there any COVID-19 Protocols in place?</div>
-            <div class="pp-a">Yes. We are under a mask mandate. We ask that you wear a mask when inside. If you have been sick, please keep an eye out for possible symptoms and please get tested if you feel the need. Also, we kindly ask that you refrain from attending servies if you have been exposed to COVID-19, or if you are sick and have not received a doctors note confirming that your sickness is not COVID-19.</div>
+            <div class="pp-a">- Sunday mornings @ 10:30am est. via <a class="innerlink" @click="navigateToLink('livestream')">Livestream</a> and In-Person.</div>
+            <div class="pp-a">- Wednesdays evenings @ 7:00pm est. via our conference line. You can join the conference line by texting </div>
         </div>
         <div class="q-wrapper">
             <div class="pp-q">What should I wear?</div>
@@ -28,11 +24,15 @@
         </div>
         <div class="q-wrapper">
             <div class="pp-q">How do I get there?</div>
-            <div class="pp-a">Get directions to New Destiny Ministries <a class="innerlink" @click="navigateToLink('directions')">here</a>.</div>
+            <div class="pp-a">Get directions to New Destiny Ministries by <a class="innerlink" @click="navigateToLink('directions')">clicking here</a>.</div>
         </div>
         <div class="q-wrapper">
             <div class="pp-q">Am I expected to donate/put money in the offering?</div>
             <div class="pp-a">If you are visiting with us, we don't expect you to put money in the offering, and you are welcome to remain seated during offering. If you consider New Destiny your church home, we'd love for you to prayerfully consider giving to New Destiny. You can give by check or cash during the service, you learn more about giving by <a class="innerlink" @click="navigateToLink('giving#faq')">clicking here</a>.</div>
+        </div>
+            <div class="q-wrapper">
+            <div class="pp-q">Are there any COVID-19 Protocols in place?</div>
+            <div class="pp-a">We are no longer under a mask mandate. If you have been sick, please keep an eye out for possible symptoms and please get tested if you feel the need. Also, we kindly ask that you refrain from attending servies if you have been exposed to COVID-19, or if you are sick and have not received a doctors note confirming that your sickness is not COVID-19.</div>
         </div>
     </div>
     <Footer />
@@ -59,8 +59,7 @@
         color: white;
         text-align: center;
         font-size: 2rem;
-        font-weight: 600;
-        letter-spacing: 0.25rem;
+        font-weight: 700;
         position: relative;
         animation-name: fade-white;
         animation-timing-function: ease;
@@ -124,11 +123,11 @@
     .expect-desc {
         opacity: 0;
         position: relative;
-        font-size: 1.1rem;
-        color: grey;
-        margin-bottom: 3rem;
+        font-size: 1rem;
+        color: black;
+        margin-bottom: 1rem;
         width: 75vw;
-        line-height: 1.75rem;
+        line-height: 1.5rem;
     }
 
     .faq {
@@ -163,7 +162,7 @@
         font-size: 1.1rem;
         font-weight: 600;
         padding-bottom: 10px;
-        color: #334e68;
+        color: #102a43;
     }
 
     .pp-a {
@@ -171,13 +170,13 @@
     }
 
     a.innerlink {
-        color: #a900ff;
-        text-decoration: underline;
+        color: #0078ff;
         cursor: pointer;
+        transition: 200ms ease-in;
     }
 
     a.innerlink:hover {
-        color: #9100ff;
+        color: #003c7e;
     }
 
     .ease-up-animation {
