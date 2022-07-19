@@ -18,7 +18,7 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        min-height: 100vh;
+        min-height: 75vh;
         background-color: white;
         padding-top: 75px;
     }
@@ -27,8 +27,7 @@
         color: white;
         text-align: center;
         font-size: 3rem;
-        font-weight: 600;
-        letter-spacing: 0.25rem;
+        font-weight: 700;
         position: relative;
         animation-name: fade-white;
         animation-timing-function: ease;

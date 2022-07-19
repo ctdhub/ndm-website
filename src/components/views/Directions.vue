@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="map">
-            <div class="map-desc">Service begins Sunday @ 10:30am est.</div>
+            <div class="map-desc">Service begins Sunday @ 10:30am est. <a class="w-live" @click="navigateToLink('livestream')">Click here</a> to watch live.</div>
             <iframe src="https://maps.google.com/maps?q=5350+Denlinger+Road,+Trotwood,+OH,+USA&output=embed" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
     </div>
@@ -41,8 +41,14 @@
     import Footer from '../layout/Footer.vue'
     import { ref } from 'vue'
     import background from '../../assets/background_color.png'
+    import { useRouter } from 'vue-router'
 
     const backgroundImg = ref(`url(${background})`)
+    const router = useRouter()
+
+    function navigateToLink(pathname) {
+        router.push(pathname);
+    }
 </script>
 
 <style scoped>
@@ -135,11 +141,21 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #f3e5eb;
-        color: #a83165;
+        background-color: #ebebeb;
+        color: #9fa8ab;
         height: 100px;
         width: 100px;
         font-size: 50px;
         border-radius: 50%;
+    }
+
+    .w-live {
+        color: #0078ff;
+        cursor: pointer;
+        transition: 200ms ease-in;
+    }
+
+    .w-live:hover {
+        color: #003c7e;
     }
 </style>

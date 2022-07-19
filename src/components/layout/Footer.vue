@@ -45,7 +45,7 @@
     .service-times {
         color: white;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: 600;
         margin: 1rem;
         /* background-color: #8b536e; */
@@ -57,7 +57,7 @@
     .day-ndm {
         color: white;
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-bottom: 0.5rem;
     }
 
@@ -73,7 +73,7 @@
         background-color: #793354;
         border-top: 1px solid #8b536e;
         padding: 1.5rem 4rem;
-        font-size: 0.9rem;
+        font-size: 1rem;
         color: white;
     }
 

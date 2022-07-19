@@ -38,7 +38,7 @@
         <div class="scripture-container">
             <div class="scripture-section">
                 <div class="slogan">"Moving Forward"</div>
-                <div class="give-scrip">" Brethren, I count not myself to have apprehended: but this one thing I do, forgetting those things which are behind, and reaching forth unto those things which are before, I press toward the mark for the prize of the high calling of God in Christ Jesus.</div>
+                <div class="give-scrip">Brethren, I count not myself to have apprehended: but this one thing I do, forgetting those things which are behind, and reaching forth unto those things which are before, I press toward the mark for the prize of the high calling of God in Christ Jesus.</div>
                 <div class="scrip-f">Philippians 3:13-14</div>
                 <div class="scrip-v">KJV</div>
             </div>
@@ -373,7 +373,7 @@
     .slogan {
         font-size: 2em;
         font-weight: 700;
-        color: #797cce;
+        color: #102a43;
         margin-bottom: 1em;
     }
 
@@ -399,6 +399,7 @@
     .scrip-v {
         color: grey;
         font-size: 0.8rem;
+        margin-bottom: 8px;
     }
 
     .scripture-container {
@@ -408,7 +409,7 @@
         align-items: center;
         padding: 5rem clamp(1rem, calc(5vw + 1rem), 2rem);
         background-color: #f5f7ff;
-        max-width: 1500px;
+        max-width: 100%;
     }
 
     .scripture-section {
