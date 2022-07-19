@@ -35,6 +35,7 @@
                 <i class="fa fa-long-arrow-alt-right"></i>
             </button>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f5f7ff" fill-opacity="1" d="M0,224L60,234.7C120,245,240,267,360,234.7C480,203,600,117,720,96C840,75,960,117,1080,149.3C1200,181,1320,203,1380,213.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
         <div class="scripture-container">
             <div class="scripture-section">
                 <div class="slogan">"Moving Forward"</div>
@@ -46,6 +47,7 @@
                 <img class="bio-img" :src="churchIn" />
             </div>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f5f7ff" fill-opacity="1" d="M0,224L60,234.7C120,245,240,267,360,234.7C480,203,600,117,720,96C840,75,960,117,1080,149.3C1200,181,1320,203,1380,213.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
     </div>
     <div class="section-3">
         <div class="sec3-hdr">

@@ -1,7 +1,7 @@
 <template>
     <div id="nav-container">
         <div class="logo" @click="navigateToLink('home')">
-            <img :src="ndmLogo" style="height: 25px; margin-right: 5px;"/>
+            <img id="ndm-logo-navbar" :src="ndmLogo" style="height: 25px; margin-right: 5px; filter: brightness(100)"/>
             <span>NDM</span>
         </div>
         <button class="menu-btn" @click="toggleMobileMenu()" style="color: white;">

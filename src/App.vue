@@ -18,6 +18,7 @@
         const menuIcon = document.getElementById("open-menu-icon");
         const menu = document.querySelector('.menu-btn');
         const logo = document.querySelector('.logo');
+        const navBarLogo = document.getElementById("ndm-logo-navbar");
 
         if(navContainer && menuIcon && menu && logo) {
             if(e.target.scrollTop > 75) {
@@ -27,6 +28,7 @@
                     navContainer.classList.add("dark")
                     logo.style.color = "black"
                     menu.style.color = "black"
+                    navBarLogo.style.filter = "brightness(1)"
                 }
             } else {
                 navContainer.style.backgroundColor = "transparent"
@@ -35,6 +37,7 @@
                     navContainer.classList.remove("dark")
                     logo.style.color = "white"
                     menu.style.color = "white"
+                    navBarLogo.style.filter = "brightness(100)"
                 }
             }
         }
