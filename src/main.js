@@ -10,6 +10,7 @@ const Home = () => import('./components/views/Home.vue')
 const Leadership = () => import('./components/views/Leadership.vue') 
 const Livestream = () => import('./components/views/Livestream.vue') 
 const Visitors = () => import('./components/views/Visitors.vue')
+const Info = () => import('./components/views/Info.vue')
 
 const routes = [
   { path: '/', component: Home },
@@ -21,6 +22,7 @@ const routes = [
   { path: '/leadership', component: Leadership },
   { path: '/livestream', component: Livestream },
   { path: '/visitors', component: Visitors },
+  { path: '/info', component: Info },
 ]
 
 const router = createRouter({

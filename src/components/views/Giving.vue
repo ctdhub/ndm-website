@@ -443,7 +443,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 2rem 2rem 4rem 2rem;
+        padding: 2rem;
     }
 
     .section-3 {
@@ -531,6 +531,18 @@
 
         .give-icon {
             font-size: 1.5rem;
+        }
+
+        .giving-detail {
+            padding: 2rem;
+        }
+
+        .give-scrip {
+            font-size: 1.25em;
+        }
+
+        .a-sub {
+            padding: 2rem;
         }
     }
 

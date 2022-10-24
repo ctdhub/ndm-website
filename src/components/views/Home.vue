@@ -409,7 +409,6 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding: 5rem clamp(1rem, calc(5vw + 1rem), 2rem);
         background-color: #f5f7ff;
         max-width: 100%;
     }
@@ -557,6 +556,10 @@
         .btn-x {
             margin: 0 0 1rem 0;
         }
+
+        .btn-x i, .btn-y i, .btn i {
+            display: none;
+        }
     }
 
     @media only screen and (max-width: 800px) {
@@ -577,7 +580,7 @@
         }
 
         .scripture-section {
-            padding: 0 1em;
+            padding: 0;
             text-align: center;
             width: 80%;
         }

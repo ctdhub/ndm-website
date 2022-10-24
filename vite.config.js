@@ -10,11 +10,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html',
-        //home: './home/index.html',
+        home: './home.html',
         //about: './about/index.html',
         //beliefs: './beliefs/index.html',
         //directions: './direction/index.html',
-        giving: './giving/index.html',
+        //giving: './giving/index.html',
         //leadership: './leadership/index.html',
         //livestream: './livestream/index.html'
       }
