@@ -7,8 +7,9 @@
         <button class="ml-link" @click="navigateToLink('about')">About Us</button>
         <button class="ml-link" @click="navigateToLink('visitors')">Visitors</button>
         <button class="ml-link" @click="navigateToLink('giving')">Giving</button>
+        <button class="ml-link" @click="navigateToLink('events')">Events</button>
         <button class="ml-link" @click="navigateToLink('livestream')">Live</button>
-        <div class="ml-link-footer">© 2022 New Destiny Ministries</div>
+        <div class="ml-link-footer">© 2023 New Destiny Ministries</div>
         <div class="ml-link-footer" style="color: #9f9f9f">#ndmstrong</div>
     </div>
 </template>

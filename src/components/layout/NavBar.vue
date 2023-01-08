@@ -22,6 +22,7 @@
             </div>
             <button :class="{ target: isTarget(['/visitors']) }" @click="navigateToLink('visitors')">Visitors</button>
             <button :class="{ target: isTarget(['/giving']) }" @click="navigateToLink('giving')">Giving</button>
+            <button :class="{ target: isTarget(['/events']) }" @click="navigateToLink('events')">Events</button>
             <button :class="{ target: isTarget(['/livestream']) }" @click="navigateToLink('livestream')">Live</button>
         </div>
     </div>

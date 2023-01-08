@@ -38,9 +38,9 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f5f7ff" fill-opacity="1" d="M0,224L60,234.7C120,245,240,267,360,234.7C480,203,600,117,720,96C840,75,960,117,1080,149.3C1200,181,1320,203,1380,213.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
         <div class="scripture-container">
             <div class="scripture-section">
-                <div class="slogan">"Moving Forward"</div>
-                <div class="give-scrip">Brethren, I count not myself to have apprehended: but this one thing I do, forgetting those things which are behind, and reaching forth unto those things which are before, I press toward the mark for the prize of the high calling of God in Christ Jesus.</div>
-                <div class="scrip-f">Philippians 3:13-14</div>
+                <!-- <div class="slogan">"Our Strength"</div> -->
+                <div class="give-scrip">But the God of all grace, who hath called us unto his eternal glory by Christ Jesus, after that ye have suffered a while, make you perfect, stablish, strengthen, settle you.</div>
+                <div class="scrip-f">1 Peter 5:10</div>
                 <div class="scrip-v">KJV</div>
             </div>
             <div class="img-container ease-up-animation scripture-section">
@@ -161,7 +161,7 @@
         align-items: center;
         background-color: white;
         width: 100%;
-        padding: 4rem 0;
+        padding: 1rem 0;
     }
 
     .section-item-container {
