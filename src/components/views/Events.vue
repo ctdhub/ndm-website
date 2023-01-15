@@ -52,7 +52,7 @@
     .section-2 {
         display: flex;
         flex-direction: column;
-        padding: 4rem 2rem;
+        padding: 4rem 1rem;
         align-items: center;
         justify-content: center;
     }
