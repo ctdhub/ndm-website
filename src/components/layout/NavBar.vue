@@ -16,6 +16,7 @@
                 </button>
                 <div class="dropdown-content">
                     <a @click="navigateToLink('leadership')">Leadership</a>
+                    <!-- <a @click="navigateToLink('framework')">Framework</a> -->
                     <a @click="navigateToLink('beliefs')">Beliefs</a>
                     <a @click="navigateToLink('directions')">Directions</a>
                 </div>

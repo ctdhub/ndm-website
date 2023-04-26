@@ -23,7 +23,7 @@
     </div>
     <div class="ways-wrapper">
         <div class="ways-tg">Ways to Give:</div>
-        <div style="color: grey; text-align: center;">For Questions, See our <a class="g-link" href="#faq">FAQ</a> below</div>
+        <div style="color: grey; text-align: center;">For Questions, See our <a class="g-link" @click="scrollToFAQ()">FAQ</a> below</div>
     </div>
     <div class="give-tab-container">
         <div class="give-tab ca selected" @click="switchTab('ca')">
@@ -171,6 +171,10 @@
                 giveeles[i].classList.remove('selected');
             }
         }
+    }
+
+    function scrollToFAQ() {
+        document.getElementById('faq').scrollIntoView();
     }
 
     onMounted(() => {

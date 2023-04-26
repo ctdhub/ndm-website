@@ -9,6 +9,10 @@
             <span style="margin-right: 10px;">Leadership</span>
             <i class="fa fa-long-arrow-alt-right"></i>
         </button>
+        <!-- <button class="btn b-sub ease-left-animation" @click="navigateToLink('framework')">
+            <span style="margin-right: 10px;">Framework</span>
+            <i class="fa fa-directions"></i>
+        </button> -->
         <button class="btn b-sub ease-right-animation" @click="navigateToLink('beliefs')">
             <span style="margin-right: 10px;">Beliefs</span>
             <i class="fa fa-long-arrow-alt-right"></i>

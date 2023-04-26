@@ -13,12 +13,13 @@ export default defineConfig({
         home: './home.html',
         about: './about.html',
         beliefs: './beliefs.html',
-        events: './events.html',
         directions: './directions.html',
+        events: './events.html',
+        framework: './framework.html',
         giving: './giving.html',
+        info: './info.html',
         leadership: './leadership.html',
         livestream: './livestream.html',
-        info: './info.html'
       }
     }
   }

@@ -2,7 +2,7 @@
     <div class="section-1" :style="{ backgroundImage: backgroundImg }">
         <div class="overlay"></div>
         <div class="a">Leadership</div>
-        <span style="color: white; padding-bottom: 5rem; z-index: 2;">Learn more about our Leadership here at New Destiny Ministries</span>
+        <span class="a-desc">Learn more about our Leadership here at New Destiny Ministries</span>
     </div>
     <div class="section-2">
         <div class="bio-container" style="background-color: aliceblue;">
@@ -85,6 +85,13 @@
         animation-name: fade-white;
         animation-timing-function: ease;
         animation-duration: 1s;
+    }
+
+    .a-desc {
+        color: white; 
+        padding: 0 1.25rem 5rem 1.25rem; 
+        z-index: 2;
+        text-align: center;
     }
 
     .bio-container {
