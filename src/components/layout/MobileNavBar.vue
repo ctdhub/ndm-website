@@ -116,7 +116,7 @@
 
     .ml-link-footer {
         color: #d2d2d2;
-        font-size: 1rem;
+        font-size: 0.75rem;
         margin-bottom: 2vh;
         overflow: hidden;
         white-space: nowrap;

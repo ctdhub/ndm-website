@@ -48,7 +48,8 @@
 
     async function fecthEvents() {
         const year = CURRENT_YEAR.value
-        const resp = await fetch(`https://api.chmeetings.com/Public/Calendar/Events?isPublicPage=true&chId=287878B11AF73310&start=${year}-01-01&end=${year}-12-31`)
+        const resp = await fetch(`https://crossorigin.me/https://api.chmeetings.com/Public/Calendar/Events?isPublicPage=true&chId=287878B11AF73310&start=${year}-01-01&end=${year}-12-31`)
+        console.log(resp)
         const results = resp.Data
         events.value = results
         console.log(results)
