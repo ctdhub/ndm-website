@@ -1,7 +1,7 @@
 <template>
     <div class="section-1">
         <div class="overlay"></div>
-        <div class="a">Coming Very Soon.</div>
+        <div class="a">Coming Soon.</div>
     </div>
     <Footer />
 </template>

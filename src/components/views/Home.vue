@@ -361,6 +361,7 @@
     .btn i, .btn-x i, .btn-y i {
         opacity: 0;
         transition: 100ms ease-in;
+        width: 0;
     }
 
     .btn:hover {

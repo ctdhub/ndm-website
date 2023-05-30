@@ -1,11 +1,13 @@
 <template>
     <div class="section-1" :style="{ backgroundImage: backgroundImg }">
         <div class="overlay"></div>
-        <div class="a">Events</div>
-        <span style="color: white; padding-bottom: 5rem;"></span>
+        <div class="a">Calendar Events</div>
+        <span style="color: white; padding-bottom: 5rem; z-index: 2;">View Past and Upcoming Events</span>
     </div>
     <div class="section-2">
-        <iframe src="https://newdestinyministries.chmeetings.com/Calendar/287878B11AF73310?isEmbed=true&color=139EAB&defaultView=agenda" height="768" scrolling="auto" loading="lazy" frameborder="0" style="border-width: 0px; width:100% !important; max-height:70vh!important;"></iframe>
+        <div class="iframe-wrapper">
+            <iframe src="https://calendar.google.com/calendar/embed?height=200&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showCalendars=0&mode=AGENDA&showTabs=1&showPrint=0&showDate=1&showNav=1&showTitle=1&title=New%20Destiny%20Ministries&src=ZG5tczU3azY2OW85MW9lN3NjOXBya2g5b2syYzlmaGJAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%237986CB" style="border-width:0" frameborder="0" scrolling="yes"></iframe>
+        </div>
     </div>
     <Footer />
 </template>
@@ -57,6 +59,18 @@
         justify-content: center;
     }
 
+    .iframe-wrapper {
+        padding: 0.25rem;
+        border-radius: 0.25rem;
+        background-color: #ffffff;
+        width: 1000px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 500px;
+    }
+
     .overlay {
         position: absolute;
         top: 0;
@@ -65,4 +79,11 @@
         opacity: 0.6;
         background-image: linear-gradient(#6b0e3a, #793354);
     }
+
+    @media only screen and (max-width: 1024px) {
+        .iframe-wrapper {
+            width: 100%;
+        }
+    }
+
 </style>

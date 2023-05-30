@@ -16,7 +16,7 @@
         <div class="q-wrapper" style="margin-top: 3rem;">
             <div class="pp-q">When are services?</div>
             <div class="pp-a">- Sunday mornings @ 10:30am est. via <a class="innerlink" @click="navigateToLink('livestream')">Livestream</a> and In-Person.</div>
-            <div class="pp-a">- Wednesdays evenings @ 7:00pm est. via our conference line. You can join the conference line by texting </div>
+            <div class="pp-a">- Wednesdays evenings @ 7:00pm est. via our conference line.</div>
         </div>
         <div class="q-wrapper">
             <div class="pp-q">What should I wear?</div>
