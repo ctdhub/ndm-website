@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="3000; URL=./index.html">
+    <script>
+      // If the above meta refresh doesn't work, use JavaScript to redirect
+      var pathname = window.location.pathname;
+      if (pathname !== "/index.html") {
+        window.location.href = "./index.html" + window.location.hash;
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
