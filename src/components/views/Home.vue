@@ -23,12 +23,12 @@
         <span>Get Directions</span>
         <i class="fa fa-directions"></i>
       </button>
-      <button
+      <!-- <button
         class="btn-y"
         @click="navigateToLink('livestream')">
         <span>Live Stream</span>
         <i class="fa fa-long-arrow-alt-right"></i>
-      </button>
+      </button> -->
     </div>
   </div>
   <div class="section-2">
