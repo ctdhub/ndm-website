@@ -17,7 +17,7 @@ export default defineConfig({
         directions: "./directions.html",
         events: "./events.html",
         framework: "./framework.html",
-        // giving: './giving.html',
+        giving: "./giving.html",
         info: "./info.html",
         leadership: "./leadership.html",
         livestream: "./livestream.html",
