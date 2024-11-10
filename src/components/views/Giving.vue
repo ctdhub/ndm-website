@@ -11,8 +11,8 @@
       <div class="scrip-sub-wrapper" style="position: relative">
         <span class="scrip-quote">"</span>
         <span class="give-scrip"
-          >So let each one give a he purposes in his heart, not grudgingly or of
-          necessity; for God loves a cheerful giver.</span
+          >So let each one give as he purposes in his heart, not grudgingly or
+          of necessity; for God loves a cheerful giver.</span
         >
         <span class="scrip-f">II Cor 9:7</span>
         <span class="scrip-v">NKJV</span>
