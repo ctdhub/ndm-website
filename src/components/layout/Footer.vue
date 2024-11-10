@@ -4,36 +4,39 @@
     <div class="day-ndm">
       <span>Sunday</span>
       <span> • </span>
+      <span style="color: #caafba">Prayer</span>
+      <span> • </span>
+      <span>8:45am est.</span>
+    </div>
+    <div class="day-ndm">
+      <span>Sunday</span>
+      <span> • </span>
+      <span style="color: #caafba">Sunday School</span>
+      <span> • </span>
+      <span>9:30am est.</span>
+    </div>
+    <div class="day-ndm">
+      <span>Sunday</span>
+      <span> • </span>
       <span style="color: #caafba">Morning Worship</span>
       <span> • </span>
       <span>10:30am est.</span>
     </div>
-    <div class="day-ndm">
-      <span>Wednesday</span>
-      <span> • </span>
-      <span style="color: #caafba">Bible Study</span>
-      <span> • </span>
-      <span>7:00pm est.</span>
-    </div>
-    <div
-      class="day-ndm"
-      style="margin-top: 4rem"></div>
+    <div class="day-ndm" style="margin-top: 4rem"></div>
     <div class="location">5350 Denlinger Road - Dayton, OH 45426</div>
   </div>
   <div class="cpyr">
     <span>© 2024 New Destiny Ministries</span>
     <span style="color: #9f9f9f">#ndmstrong</span>
-    <i
-      class="fab fa-facebook-f fb-icon"
-      @click="gotoFacebook"></i>
+    <i class="fab fa-facebook-f fb-icon" @click="gotoFacebook"></i>
   </div>
 </template>
 
 <script setup>
 function gotoFacebook() {
   window.open(
-    'https://www.facebook.com/pages/category/Religious-organization/New-Destiny-Ministries-115824295104790/',
-    '_blank'
+    "https://www.facebook.com/pages/category/Religious-organization/New-Destiny-Ministries-115824295104790/",
+    "_blank"
   )
 }
 </script>
