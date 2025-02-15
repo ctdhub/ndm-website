@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="section-1"
-    :style="{ backgroundImage: churchImg }">
+  <div class="section-1" :style="{ backgroundImage: churchImg }">
     <div class="overlay"></div>
     <div class="site-text">
       <div class="a">New Destiny Ministries</div>
@@ -17,9 +15,7 @@
       </div>
     </div>
     <div class="buttons">
-      <button
-        class="btn-x"
-        @click="navigateToLink('directions')">
+      <button class="btn-x" @click="navigateToLink('directions')">
         <span>Get Directions</span>
         <i class="fa fa-directions"></i>
       </button>
@@ -44,47 +40,40 @@
         this ministry is to evangelize the unchurched while preparing the
         believer to live a victorious Christian life.</span
       >
-      <button
-        class="btn"
-        @click="navigateToLink('about')">
+      <button class="btn" @click="navigateToLink('about')">
         <span>About Us</span>
         <i class="fa fa-long-arrow-alt-right"></i>
       </button>
     </div>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 320">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path
         fill="#f5f7ff"
         fill-opacity="1"
-        d="M0,224L60,234.7C120,245,240,267,360,234.7C480,203,600,117,720,96C840,75,960,117,1080,149.3C1200,181,1320,203,1380,213.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+        d="M0,224L60,234.7C120,245,240,267,360,234.7C480,203,600,117,720,96C840,75,960,117,1080,149.3C1200,181,1320,203,1380,213.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+      ></path>
     </svg>
     <div class="scripture-container">
       <div class="scripture-section">
-        <div class="slogan">"Pressing Toward the Mark"</div>
+        <div class="slogan">"Equipped for Every Good Work"</div>
         <div class="give-scrip">
-          <sup>13</sup> Brethren, I count not myself to have apprehended: but
-          this one thing I do, forgetting those things which are behind, and
-          reaching forth unto those things which are before, <sup>14</sup> I
-          press toward the mark for the prize of the high calling of God in
-          Christ Jesus.
+          <sup>16</sup>All Scripture is given by inspiration of God, and is
+          profitable for doctrine, for reproof, for correction, for instruction
+          in righteousness, <sup>17</sup>that the man of God may be complete,
+          thoroughly equipped for every good work.
         </div>
-        <div class="scrip-f">Philippians 3:13-14</div>
-        <div class="scrip-v">KJV</div>
+        <div class="scrip-f">2 Timothy 3:16-17</div>
+        <div class="scrip-v">NKJV</div>
       </div>
       <div class="img-container ease-up-animation scripture-section">
-        <img
-          class="bio-img"
-          :src="churchIn" />
+        <img class="bio-img" :src="churchIn" />
       </div>
     </div>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 320">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path
         fill="#f5f7ff"
         fill-opacity="1"
-        d="M0,224L60,234.7C120,245,240,267,360,234.7C480,203,600,117,720,96C840,75,960,117,1080,149.3C1200,181,1320,203,1380,213.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+        d="M0,224L60,234.7C120,245,240,267,360,234.7C480,203,600,117,720,96C840,75,960,117,1080,149.3C1200,181,1320,203,1380,213.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+      ></path>
     </svg>
   </div>
   <div class="section-3">
@@ -95,39 +84,36 @@
       Check out a few Resources at New Destiny Ministries
     </div>
     <div class="card-container">
-      <div
-        class="card"
-        @click="navigateToLink('beliefs')">
+      <div class="card" @click="navigateToLink('beliefs')">
         <div class="overlay-gradient"></div>
         <div
           class="overlay-image img-3"
-          :style="{ backgroundImage: beliefsImg }"></div>
+          :style="{ backgroundImage: beliefsImg }"
+        ></div>
         <i class="card-icon fa fa-bible"></i>
         <div class="card-hdr">Our Beliefs</div>
         <div class="card-desc">
           What do we believe? Click to learn more about our beliefs at NDM.
         </div>
       </div>
-      <div
-        class="card"
-        @click="navigateToLink('visitors')">
+      <div class="card" @click="navigateToLink('visitors')">
         <div class="overlay-gradient"></div>
         <div
           class="overlay-image img-2"
-          :style="{ backgroundImage: visitorsImg }"></div>
+          :style="{ backgroundImage: visitorsImg }"
+        ></div>
         <i class="card-icon fa fa-user-friends"></i>
         <div class="card-hdr">Vistors</div>
         <div class="card-desc">
           First time visitor? Click to learn more about visiting at NDM.
         </div>
       </div>
-      <div
-        class="card"
-        @click="navigateToLink('giving')">
+      <div class="card" @click="navigateToLink('giving')">
         <div class="overlay-gradient"></div>
         <div
           class="overlay-image img-1"
-          :style="{ backgroundImage: givingImg }"></div>
+          :style="{ backgroundImage: givingImg }"
+        ></div>
         <i class="card-icon fa fa-donate"></i>
         <div class="card-hdr">How to Give</div>
         <div class="card-desc">
@@ -141,14 +127,14 @@
 </template>
 
 <script setup>
-import Footer from '../layout/Footer.vue'
-import churchIn from '../../assets/church_inside.jpg'
-import church from '../../assets/church.jpg'
-import giving from '../../assets/giving.jpg'
-import visitors from '../../assets/visitors.jpg'
-import beliefs from '../../assets/beliefs.jpg'
-import { ref, computed, onUnmounted } from 'vue'
-import { useRouter } from 'vue-router'
+import Footer from "../layout/Footer.vue"
+import churchIn from "../../assets/church_inside.jpg"
+import church from "../../assets/church.jpg"
+import giving from "../../assets/giving.jpg"
+import visitors from "../../assets/visitors.jpg"
+import beliefs from "../../assets/beliefs.jpg"
+import { ref, computed, onUnmounted } from "vue"
+import { useRouter } from "vue-router"
 
 const router = useRouter()
 
@@ -161,7 +147,7 @@ const givingImg = ref(`url(${giving})`)
 const visitorsImg = ref(`url(${visitors})`)
 const beliefsImg = ref(`url(${beliefs})`)
 
-const words = ['Love', 'Peace', 'Grace', 'Mercy', 'Abundance', 'Longsuffering']
+const words = ["Love", "Peace", "Grace", "Mercy", "Abundance", "Longsuffering"]
 const phrase = ref(words[0])
 let prevIdx = 0
 let isChangingWord = false
@@ -169,7 +155,7 @@ let isChangingWord = false
 const wordLoop = setInterval(async () => {
   if (!isChangingWord) {
     isChangingWord = true
-    let newWord = ''
+    let newWord = ""
     // delete current word
     for (let i = phrase.value.length; i >= 0; i--) {
       phrase.value = phrase.value.substring(0, i)

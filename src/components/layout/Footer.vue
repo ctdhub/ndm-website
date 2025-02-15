@@ -26,7 +26,7 @@
     <div class="location">5350 Denlinger Road - Dayton, OH 45426</div>
   </div>
   <div class="cpyr">
-    <span>© 2024 New Destiny Ministries</span>
+    <span>© 2025 New Destiny Ministries</span>
     <span style="color: #9f9f9f">#ndmstrong</span>
     <i class="fab fa-facebook-f fb-icon" @click="gotoFacebook"></i>
   </div>

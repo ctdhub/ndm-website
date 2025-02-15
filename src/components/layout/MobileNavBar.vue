@@ -1,54 +1,28 @@
 <template>
-  <div
-    id="nav-overlay-mobile"
-    style="width: 0vw">
-    <button
-      class="close-mm-btn"
-      @click="toggleMobileMenu()">
+  <div id="nav-overlay-mobile" style="width: 0vw">
+    <button class="close-mm-btn" @click="toggleMobileMenu()">
       <i class="fa fa-times"></i>
     </button>
-    <button
-      class="ml-link"
-      @click="navigateToLink('home')">
-      Home
-    </button>
-    <button
-      class="ml-link"
-      @click="navigateToLink('about')">
-      About Us
-    </button>
-    <button
-      class="ml-link"
-      @click="navigateToLink('visitors')">
+    <button class="ml-link" @click="navigateToLink('home')">Home</button>
+    <button class="ml-link" @click="navigateToLink('about')">About Us</button>
+    <button class="ml-link" @click="navigateToLink('visitors')">
       Visitors
     </button>
-    <button
-      class="ml-link"
-      @click="navigateToLink('giving')">
-      Giving
-    </button>
-    <button
-      class="ml-link"
-      @click="navigateToLink('events')">
-      Events
-    </button>
+    <button class="ml-link" @click="navigateToLink('giving')">Giving</button>
+    <button class="ml-link" @click="navigateToLink('events')">Events</button>
     <!-- <button class="ml-link" @click="navigateToLink('livestream')">Live</button> -->
-    <div class="ml-link-footer">© 2024 New Destiny Ministries</div>
-    <div
-      class="ml-link-footer"
-      style="color: #9f9f9f">
-      #ndmstrong
-    </div>
+    <div class="ml-link-footer">© 2025 New Destiny Ministries</div>
+    <div class="ml-link-footer" style="color: #9f9f9f">#ndmstrong</div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref, onMounted } from "vue"
+import { useRouter } from "vue-router"
 
 const router = useRouter()
 
-const emit = defineEmits(['toggleMenu'])
+const emit = defineEmits(["toggleMenu"])
 
 function navigateToLink(pathname) {
   router.push(pathname)
@@ -56,7 +30,7 @@ function navigateToLink(pathname) {
 }
 
 function toggleMobileMenu() {
-  emit('toggleMenu')
+  emit("toggleMenu")
 }
 
 onMounted(() => {})
@@ -119,7 +93,7 @@ onMounted(() => {})
 }
 
 .ml-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
