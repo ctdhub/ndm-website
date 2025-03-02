@@ -58,16 +58,6 @@
         >.
       </div>
     </div>
-    <div class="q-wrapper">
-      <div class="pp-q">Are there any COVID-19 Protocols in place?</div>
-      <div class="pp-a">
-        We are no longer under a mask mandate. If you have been sick, please
-        keep an eye out for possible symptoms and please get tested if you feel
-        the need. Also, we kindly ask that you refrain from attending servies if
-        you have been exposed to COVID-19, or if you are sick and have not
-        received a doctors note confirming that your sickness is not COVID-19.
-      </div>
-    </div>
   </div>
   <Footer />
 </template>

@@ -165,9 +165,9 @@ onMounted(() => {
 }
 
 .bio-container {
-  max-width: 90vw;
+  max-width: 85ch;
   line-height: 2;
-  padding: 1rem;
+  padding: 2rem;
   margin-bottom: 3rem;
   border-radius: 5px;
 }
