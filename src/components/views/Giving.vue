@@ -69,9 +69,9 @@
           <div>
             <i class="check-icon fa fa-check"></i>
             <span>Give via </span>
-            <a href="https://cash.app/$NDMDayton" class="g-link">Cash App</a>
+            <a href="https://cash.app/$NDMDayton1" class="g-link">Cash App</a>
             <span>
-              or by searching "NDMDayton" inside the mobile CashApp
+              or by searching "NDMDayton1" inside the mobile CashApp
               application.</span
             >
           </div>
