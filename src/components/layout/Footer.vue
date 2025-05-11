@@ -13,7 +13,7 @@
       <span> • </span>
       <span style="color: #caafba">Sunday School</span>
       <span> • </span>
-      <span>9:30am est.</span>
+      <span>9:15am est.</span>
     </div>
     <div class="day-ndm">
       <span>Sunday</span>

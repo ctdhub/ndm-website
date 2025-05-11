@@ -23,7 +23,7 @@
     <div class="q-wrapper" style="margin-top: 3rem">
       <div class="pp-q">When are services?</div>
       <div class="pp-a">- Prayer, Sunday mornings @ 8:45am est.</div>
-      <div class="pp-a">- Sunday School, Sunday mornings @ 9:30am est.</div>
+      <div class="pp-a">- Sunday School, Sunday mornings @ 9:15am est.</div>
       <div class="pp-a">- Morning Worship, Sunday mornings @ 10:30am est.</div>
     </div>
     <div class="q-wrapper">
