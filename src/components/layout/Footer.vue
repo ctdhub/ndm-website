@@ -6,7 +6,7 @@
       <span> • </span>
       <span style="color: #caafba">Prayer</span>
       <span> • </span>
-      <span>8:45am est.</span>
+      <span>8:30am est.</span>
     </div>
     <div class="day-ndm">
       <span>Sunday</span>
