@@ -79,7 +79,7 @@
           :style="{ backgroundImage: visitorsImg }"
         ></div>
         <i class="card-icon fa fa-user-friends"></i>
-        <div class="card-hdr">Vistors</div>
+        <div class="card-hdr">Visitors</div>
         <div class="card-desc">
           First time visitor? Click to learn more about visiting at NDM.
         </div>
@@ -289,7 +289,7 @@ img.resize {
   text-align: center;
   position: relative;
   font-weight: bold;
-  font-size: var(--size-4);
+  font-size: var(--font-size-fluid-1);
   text-transform: uppercase;
   animation-name: fade-white;
   animation-timing-function: ease;
@@ -299,7 +299,7 @@ img.resize {
 .a {
   color: white;
   text-align: center;
-  font-size: var(--size-9);
+  font-size: var(--font-size-fluid-3);
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 3rem;
