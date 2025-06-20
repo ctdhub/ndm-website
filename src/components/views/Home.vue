@@ -20,12 +20,6 @@
         <span>Get Directions</span>
         <i class="fa fa-directions"></i>
       </button>
-      <!-- <button
-        class="btn-y"
-        @click="navigateToLink('livestream')">
-        <span>Live Stream</span>
-        <i class="fa fa-long-arrow-alt-right"></i>
-      </button> -->
     </div>
   </div>
   <div class="section-2">
@@ -361,7 +355,6 @@ img.resize {
   border: 2px solid white;
   border-radius: 2px;
   padding: 0.85rem 2rem;
-  margin: 0 2rem 0 0;
   font-size: 0.8rem;
   cursor: pointer;
   background-color: white;
