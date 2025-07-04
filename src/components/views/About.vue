@@ -93,7 +93,7 @@ const churchImg = ref(`url(${church})`);
 .about-cards-container {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
   gap: var(--size-4);
   width: 100%;
 }
