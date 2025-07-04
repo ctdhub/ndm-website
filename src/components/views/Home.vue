@@ -72,6 +72,23 @@
         <div class="card-desc">
           What do we believe? Click to learn more about our beliefs at NDM.
         </div>
+        <button
+          style="
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: var(--size-2);
+            font-size: var(--font-size-fluid-0);
+            border: none;
+            background: none;
+            margin-top: auto;
+            z-index: 3;
+            color: white;
+          "
+        >
+          <span>Learn More</span>
+          <FontAwesomeIcon :icon="faArrowRight" />
+        </button>
       </div>
       <div class="card" @click="navigateToLink('visitors')">
         <div class="overlay-gradient"></div>
@@ -84,6 +101,23 @@
         <div class="card-desc">
           First time visitor? Click to learn more about visiting at NDM.
         </div>
+        <button
+          style="
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: var(--size-2);
+            font-size: var(--font-size-fluid-0);
+            border: none;
+            background: none;
+            margin-top: auto;
+            z-index: 3;
+            color: white;
+          "
+        >
+          <span>Learn More</span>
+          <FontAwesomeIcon :icon="faArrowRight" />
+        </button>
       </div>
       <div class="card" @click="navigateToLink('giving')">
         <div class="overlay-gradient"></div>
@@ -97,6 +131,23 @@
           Thank you for your interest in giving. Click to learn more about
           giving at NDM.
         </div>
+        <button
+          style="
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: var(--size-2);
+            font-size: var(--font-size-fluid-0);
+            border: none;
+            background: none;
+            margin-top: auto;
+            z-index: 3;
+            color: white;
+          "
+        >
+          <span>Learn More</span>
+          <FontAwesomeIcon :icon="faArrowRight" />
+        </button>
       </div>
     </div>
   </div>
@@ -114,6 +165,7 @@ import { ref, computed, onUnmounted } from "vue";
 import { useRouter } from "vue-router";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
+  faArrowRight,
   faBible,
   faDirections,
   faDonate,
@@ -254,10 +306,8 @@ onUnmounted(() => {
 .bio-img {
   height: auto;
   transition: transform 300ms ease-in-out;
-  max-height: 500px;
   border-radius: 5px;
-  box-shadow: 5px 9px 0px 1px #7c1c4552;
-  outline: 2px solid #000000;
+  width: 100%;
 }
 
 img.resize {
@@ -517,6 +567,7 @@ img.resize {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 20%;
+  align-items: start;
   padding: 2rem;
   min-height: 350px;
   border-radius: 5px;
@@ -526,8 +577,6 @@ img.resize {
   max-width: 700px;
   cursor: pointer;
   overflow: hidden;
-  box-shadow: 5px 9px 0px 1px #7c1c4552;
-  outline: 2px solid #000000;
 }
 
 .card-hdr {

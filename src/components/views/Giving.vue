@@ -337,8 +337,6 @@ onMounted(() => {
   background-color: aliceblue;
   padding: 2rem;
   border-radius: 5px;
-  box-shadow: 5px 9px 0px 1px #3346792e;
-  outline: 2px solid #000000;
 }
 
 .scrip-quote {
@@ -464,8 +462,6 @@ onMounted(() => {
   background-color: aliceblue;
   line-height: 2;
   max-width: 850px;
-  box-shadow: 5px 9px 0px 1px #3346792e;
-  outline: 2px solid #000000;
 }
 
 .give-div.selected {

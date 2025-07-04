@@ -1,0 +1,1 @@
+import{F as s}from"./Footer.467f5ff5.js";import{_ as t,c as o,e,a as r,k as _,o as c}from"./main.9d8033ce.js";const n={__name:"Livestream",setup(i){return(l,a)=>(c(),o(_,null,[a[0]||(a[0]=e("div",{class:"section-1"},[e("div",{class:"overlay"}),e("div",{class:"a"},"Coming Soon.")],-1)),r(s)],64))}};var d=t(n,[["__scopeId","data-v-5d84cc19"]]);export{d as default};
