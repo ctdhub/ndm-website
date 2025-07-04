@@ -1,7 +1,7 @@
 <template>
   <div id="nav-overlay-mobile" style="width: 0vw">
     <button class="close-mm-btn" @click="toggleMobileMenu()">
-      <i class="fa fa-times"></i>
+      <FontAwesomeIcon :icon="faTimes" />
     </button>
     <button class="ml-link" @click="navigateToLink('home')">Home</button>
     <button class="ml-link" @click="navigateToLink('about')">About Us</button>
@@ -17,23 +17,25 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue"
-import { useRouter } from "vue-router"
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { ref, onMounted } from "vue";
+import { useRouter } from "vue-router";
 
-const router = useRouter()
+const router = useRouter();
 
-const emit = defineEmits(["toggleMenu"])
+const emit = defineEmits(["toggleMenu"]);
 
 function navigateToLink(pathname) {
-  router.push(pathname)
-  toggleMobileMenu()
+  router.push(pathname);
+  toggleMobileMenu();
 }
 
 function toggleMobileMenu() {
-  emit("toggleMenu")
+  emit("toggleMenu");
 }
 
-onMounted(() => {})
+onMounted(() => {});
 </script>
 
 <style scoped>

@@ -1,5 +1,5 @@
 <template>
-  <div class="section-1" :style="{ backgroundImage: backgroundImg }">
+  <div class="section-1">
     <div class="overlay"></div>
     <div class="a">Leadership</div>
     <span class="a-desc"
@@ -91,38 +91,38 @@
 </template>
 
 <script setup>
-import Footer from "../layout/Footer.vue"
-import { ref, onMounted } from "vue"
-import founders from "../../assets/founders.jpg"
-import pastor from "../../assets/pastor.png"
-import background from "../../assets/background_color.png"
+import Footer from "../layout/Footer.vue";
+import { ref, onMounted } from "vue";
+import founders from "../../assets/founders.jpg";
+import pastor from "../../assets/pastor.png";
+import background from "../../assets/background_color.png";
 
-const backgroundImg = ref(`url(${background})`)
+const backgroundImg = ref(`url(${background})`);
 
 onMounted(() => {
-  var eleLength = document.querySelectorAll(`.img-container`).length
+  var eleLength = document.querySelectorAll(`.img-container`).length;
   for (let i = 0; i < eleLength; i++) {
     new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        const t = entry.target
-        var direction = ""
+        const t = entry.target;
+        var direction = "";
         if (i % 2 == 0) {
-          direction = "ease-left-animation"
+          direction = "ease-left-animation";
         } else {
-          direction = "ease-right-animation"
+          direction = "ease-right-animation";
         }
 
         if (entry.isIntersecting) {
-          t.classList.add(direction)
-          return // if we added the class, exit the function
+          t.classList.add(direction);
+          return; // if we added the class, exit the function
         }
 
         // We're not intersecting, so remove the class!
-        t.classList.remove(direction)
-      })
-    }).observe(document.querySelectorAll(`.img-container`)[i])
+        t.classList.remove(direction);
+      });
+    }).observe(document.querySelectorAll(`.img-container`)[i]);
   }
-})
+});
 </script>
 
 <style scoped>
@@ -243,12 +243,23 @@ onMounted(() => {
   }
 }
 
+@keyframes fade-white {
+  from {
+    color: transparent;
+    top: 5vh;
+  }
+  to {
+    color: white;
+    top: 0;
+  }
+}
+
 .overlay {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 1;
   background-image: linear-gradient(#6b0e3a, #793354);
 }
 </style>

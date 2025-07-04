@@ -1,5 +1,5 @@
 <template>
-  <div class="section-1" :style="{ backgroundImage: backgroundImg }">
+  <div class="section-1">
     <div class="overlay"></div>
     <div class="a">Visitors</div>
     <span style="color: white; padding-bottom: 5rem"></span>
@@ -63,16 +63,16 @@
 </template>
 
 <script setup>
-import Footer from "../layout/Footer.vue"
-import { ref } from "vue"
-import { useRouter } from "vue-router"
-import background from "../../assets/background_color.png"
+import Footer from "../layout/Footer.vue";
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+import background from "../../assets/background_color.png";
 
-const backgroundImg = ref(`url(${background})`)
-const router = useRouter()
+const backgroundImg = ref(`url(${background})`);
+const router = useRouter();
 
 function navigateToLink(pathname) {
-  router.push(pathname)
+  router.push(pathname);
 }
 </script>
 
@@ -221,12 +221,23 @@ a.innerlink:hover {
   }
 }
 
+@keyframes fade-white {
+  from {
+    color: transparent;
+    top: 5vh;
+  }
+  to {
+    color: white;
+    top: 0;
+  }
+}
+
 .overlay {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 1;
   background-image: linear-gradient(#6b0e3a, #793354);
 }
 </style>

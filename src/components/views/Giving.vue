@@ -1,5 +1,5 @@
 <template>
-  <div class="section-1" :style="{ backgroundImage: backgroundImg }">
+  <div class="section-1">
     <div class="overlay"></div>
     <div class="a">Giving</div>
     <span style="color: white; padding-bottom: 5rem; z-index: 2"
@@ -52,11 +52,11 @@
       <span>PayPal</span>
     </div>
     <div class="give-tab ml" @click="switchTab('ml')">
-      <i class="give-icon far fa-envelope"></i>
+      <FontAwesomeIcon :icon="faEnvelope" class="give-icon" />
       <span>Mail</span>
     </div>
     <div class="give-tab ip" @click="switchTab('ip')">
-      <i class="give-icon fa fa-donate"></i>
+      <FontAwesomeIcon :icon="faDonate" class="give-icon" />
       <span>In Person</span>
     </div>
   </div>
@@ -67,7 +67,7 @@
         <div class="give-a">Give via Cash App</div>
         <div class="give-b">
           <div>
-            <i class="check-icon fa fa-check"></i>
+            <FontAwesomeIcon :icon="faCheck" class="check-icon" />
             <span>Give via </span>
             <a href="https://cash.app/$NDMDayton1" class="g-link">Cash App</a>
             <span>
@@ -76,7 +76,7 @@
             >
           </div>
           <div>
-            <i class="check-icon fa fa-check"></i>
+            <FontAwesomeIcon :icon="faCheck" class="check-icon" />
             <span
               >Be sure to specify how you would like to allocate your giving
               (tithes, offerings, building fund, etc.) in the "For"
@@ -92,26 +92,26 @@
         <div class="give-a">Give via PayPal</div>
         <div class="give-b">
           <div>
-            <i class="check-icon fa fa-check"></i>
+            <FontAwesomeIcon :icon="faCheck" class="check-icon" />
             <span>Give via </span>
             <a href="https://paypal.me/ndmdayton" class="g-link">PayPal</a>
           </div>
           <div>
-            <i class="check-icon fa fa-check"></i>
+            <FontAwesomeIcon :icon="faCheck" class="check-icon" />
             <span
               >Be sure to specify how you would like to allocate your giving
               (tithes, offerings, building fund, etc.)</span
             >
           </div>
           <div>
-            <i class="check-icon fa fa-check"></i>
+            <FontAwesomeIcon :icon="faCheck" class="check-icon" />
             <span
               >Giving through PayPal constitutes as a donation, so you will not
               be charged a fee for any transaction.</span
             >
           </div>
           <div>
-            <i class="check-icon fa fa-check"></i>
+            <FontAwesomeIcon :icon="faCheck" class="check-icon" />
             <span
               >After giving your donation and once your transaction is complete,
               PayPal should send you a confirmation email.</span
@@ -126,7 +126,7 @@
         <div class="give-a">Mail in Your Contribution</div>
         <div class="give-b">
           <div>
-            <i class="check-icon fa fa-check"></i>
+            <FontAwesomeIcon :icon="faCheck" class="check-icon" />
             <span
               >You can always mail in your contribution directly to New Destiny
               Ministries - 5350 Denlinger Road - Trotwood, Ohio 45426</span
@@ -141,7 +141,7 @@
         <div class="give-a">Give in Person</div>
         <div class="give-b">
           <div>
-            <i class="check-icon fa fa-check"></i>
+            <FontAwesomeIcon :icon="faCheck" class="check-icon" />
             <span
               >You can give by cash or check during at our Sunday worship
               service. Giving envelopes can be picked up on your way into
@@ -229,67 +229,73 @@
 </template>
 
 <script setup>
-import Footer from "../layout/Footer.vue"
-import { ref, onMounted } from "vue"
-import background from "../../assets/background_color.png"
-import paypal from "../../assets/paypal-icon.png"
-import cashapp from "../../assets/icon-square-cash.png"
+import Footer from "../layout/Footer.vue";
+import { ref, onMounted } from "vue";
+import background from "../../assets/background_color.png";
+import paypal from "../../assets/paypal-icon.png";
+import cashapp from "../../assets/icon-square-cash.png";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import {
+  faCheck,
+  faDonate,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
 
-const backgroundImg = ref(`url(${background})`)
-var arr1
-var arr2
-var giveeles
+const backgroundImg = ref(`url(${background})`);
+var arr1;
+var arr2;
+var giveeles;
 
 function switchTab(tabName) {
   for (var i = 0; i < giveeles.length; i++) {
     if (giveeles[i].classList.contains(tabName)) {
-      giveeles[i].classList.add("selected")
+      giveeles[i].classList.add("selected");
     } else {
-      giveeles[i].classList.remove("selected")
+      giveeles[i].classList.remove("selected");
     }
   }
 }
 
 function scrollToFAQ() {
-  document.getElementById("faq").scrollIntoView()
+  document.getElementById("faq").scrollIntoView();
 }
 
 onMounted(() => {
-  arr1 = document.querySelectorAll(".give-div")
-  arr2 = document.querySelectorAll(".give-tab")
-  giveeles = Array.from(arr1).concat(Array.from(arr2))
+  arr1 = document.querySelectorAll(".give-div");
+  arr2 = document.querySelectorAll(".give-tab");
+  giveeles = Array.from(arr1).concat(Array.from(arr2));
 
   new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      const t = entry.target
-      var animation = "fade-in-animation"
+      const t = entry.target;
+      var animation = "fade-in-animation";
 
       if (entry.isIntersecting) {
-        t.classList.add(animation)
-        return // if we added the class, exit the function
+        t.classList.add(animation);
+        return; // if we added the class, exit the function
       }
 
       // We're not intersecting, so remove the class!
-      t.classList.remove(animation)
-    })
-  }).observe(document.querySelector(`.ways-wrapper`))
+      t.classList.remove(animation);
+    });
+  }).observe(document.querySelector(`.ways-wrapper`));
 
   new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      const t = entry.target
-      const tc = t.firstElementChild
+      const t = entry.target;
+      const tc = t.firstElementChild;
       if (entry.isIntersecting) {
-        t.classList.add("diagnol-in-animation")
-        tc.classList.add("diagnol-in-op-animation")
-        return // if we added the class, exit the function
+        t.classList.add("diagnol-in-animation");
+        tc.classList.add("diagnol-in-op-animation");
+        return; // if we added the class, exit the function
       }
 
       // We're not intersecting, so remove the class!
-      t.classList.remove("diagnol-in-animation")
-      tc.classList.remove("diagnol-in-op-animation")
-    })
-  }).observe(document.querySelector(`.scrip-wrapper`))
-})
+      t.classList.remove("diagnol-in-animation");
+      tc.classList.remove("diagnol-in-op-animation");
+    });
+  }).observe(document.querySelector(`.scrip-wrapper`));
+});
 </script>
 
 <style scoped>
@@ -331,6 +337,8 @@ onMounted(() => {
   background-color: aliceblue;
   padding: 2rem;
   border-radius: 5px;
+  box-shadow: 5px 9px 0px 1px #3346792e;
+  outline: 2px solid #000000;
 }
 
 .scrip-quote {
@@ -456,6 +464,8 @@ onMounted(() => {
   background-color: aliceblue;
   line-height: 2;
   max-width: 850px;
+  box-shadow: 5px 9px 0px 1px #3346792e;
+  outline: 2px solid #000000;
 }
 
 .give-div.selected {
@@ -684,12 +694,23 @@ onMounted(() => {
   }
 }
 
+@keyframes fade-white {
+  from {
+    color: transparent;
+    top: 5vh;
+  }
+  to {
+    color: white;
+    top: 0;
+  }
+}
+
 .overlay {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 1;
   background-image: linear-gradient(#6b0e3a, #793354);
 }
 </style>

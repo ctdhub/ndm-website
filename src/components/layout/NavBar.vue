@@ -9,7 +9,7 @@
       <span>NDM</span>
     </div>
     <button class="menu-btn" @click="toggleMobileMenu()" style="color: white">
-      <i id="open-menu-icon" class="fa fa-bars"></i>
+      <FontAwesomeIcon :icon="faBars" id="open-menu-icon" />
     </button>
     <div class="links">
       <button
@@ -24,10 +24,10 @@
           @click="navigateToLink('about')"
         >
           <span>About Us</span>
-          <i
+          <FontAwesomeIcon
+            :icon="faChevronDown"
             style="font-size: 0.6rem; padding-left: 5px"
-            class="fa fa-chevron-down"
-          ></i>
+          />
         </button>
         <div class="dropdown-content">
           <a @click="navigateToLink('leadership')">Leadership</a>
@@ -60,36 +60,38 @@
 </template>
 
 <script setup>
-import ndmLogo from "../../assets/ndm-logo.png"
-import { ref, onMounted } from "vue"
-import { useRouter, useRoute } from "vue-router"
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import ndmLogo from "../../assets/ndm-logo.png";
+import { ref, onMounted } from "vue";
+import { useRouter, useRoute } from "vue-router";
+import { faBars, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-const router = useRouter()
-const route = useRoute()
+const router = useRouter();
+const route = useRoute();
 
-const emit = defineEmits(["toggleMenu"])
+const emit = defineEmits(["toggleMenu"]);
 
 function navigateToLink(pathname) {
-  router.push(pathname)
+  router.push(pathname);
 }
 
 function toggleMobileMenu() {
-  emit("toggleMenu")
+  emit("toggleMenu");
 }
 
 function isTarget(routes) {
   if (routes.length) {
     for (let r of routes) {
       if (route.path == r) {
-        return true
+        return true;
       }
     }
 
-    return false
+    return false;
   }
 }
 
-onMounted(() => {})
+onMounted(() => {});
 </script>
 
 <style scoped>

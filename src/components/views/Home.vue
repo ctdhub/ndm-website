@@ -18,7 +18,7 @@
     <div class="buttons">
       <button class="btn-x" @click="navigateToLink('directions')">
         <span>Get Directions</span>
-        <i class="fa fa-directions"></i>
+        <FontAwesomeIcon :icon="faDirections" />
       </button>
     </div>
   </div>
@@ -34,7 +34,7 @@
       >
       <button class="btn" @click="navigateToLink('about')">
         <span>About Us</span>
-        <i class="fa fa-long-arrow-alt-right"></i>
+        <FontAwesomeIcon :icon="faLongArrowAltRight" />
       </button>
     </div>
     <div class="scripture-container">
@@ -44,7 +44,8 @@
           <sup>16</sup>All Scripture is given by inspiration of God, and is
           profitable for doctrine, for reproof, for correction, for instruction
           in righteousness, <sup>17</sup>that the man of God may be complete,
-          thoroughly <em>equipped for every good work</em>.
+          thoroughly <em><b>equipped for every good work</b></em
+          >.
         </div>
         <div class="scrip-f">2 Timothy 3:16-17</div>
         <div class="scrip-v">NKJV</div>
@@ -66,7 +67,7 @@
           class="overlay-image img-3"
           :style="{ backgroundImage: beliefsImg }"
         ></div>
-        <i class="card-icon fa fa-bible"></i>
+        <FontAwesomeIcon :icon="faBible" class="card-icon" />
         <div class="card-hdr">Our Beliefs</div>
         <div class="card-desc">
           What do we believe? Click to learn more about our beliefs at NDM.
@@ -78,7 +79,7 @@
           class="overlay-image img-2"
           :style="{ backgroundImage: visitorsImg }"
         ></div>
-        <i class="card-icon fa fa-user-friends"></i>
+        <FontAwesomeIcon :icon="faUserFriends" class="card-icon" />
         <div class="card-hdr">Visitors</div>
         <div class="card-desc">
           First time visitor? Click to learn more about visiting at NDM.
@@ -90,7 +91,7 @@
           class="overlay-image img-1"
           :style="{ backgroundImage: givingImg }"
         ></div>
-        <i class="card-icon fa fa-donate"></i>
+        <FontAwesomeIcon :icon="faDonate" class="card-icon" />
         <div class="card-hdr">How to Give</div>
         <div class="card-desc">
           Thank you for your interest in giving. Click to learn more about
@@ -103,82 +104,90 @@
 </template>
 
 <script setup>
-import Footer from "../layout/Footer.vue"
-import churchIn from "../../assets/church_inside.jpg"
-import church from "../../assets/church.jpg"
-import giving from "../../assets/giving.jpg"
-import visitors from "../../assets/visitors.jpg"
-import beliefs from "../../assets/beliefs.jpg"
-import { ref, computed, onUnmounted } from "vue"
-import { useRouter } from "vue-router"
+import Footer from "../layout/Footer.vue";
+import churchIn from "../../assets/church_inside.jpg";
+import church from "../../assets/church.jpg";
+import giving from "../../assets/giving.jpg";
+import visitors from "../../assets/visitors.jpg";
+import beliefs from "../../assets/beliefs.jpg";
+import { ref, computed, onUnmounted } from "vue";
+import { useRouter } from "vue-router";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import {
+  faBible,
+  faDirections,
+  faDonate,
+  faLongArrowAltRight,
+  faUserFriends,
+} from "@fortawesome/free-solid-svg-icons";
 
-const router = useRouter()
+const router = useRouter();
 
 function navigateToLink(pathname) {
-  router.push(pathname)
+  router.push(pathname);
 }
 
-const churchImg = ref(`url(${church})`)
-const givingImg = ref(`url(${giving})`)
-const visitorsImg = ref(`url(${visitors})`)
-const beliefsImg = ref(`url(${beliefs})`)
+const churchImg = ref(`url(${church})`);
+const givingImg = ref(`url(${giving})`);
+const visitorsImg = ref(`url(${visitors})`);
+const beliefsImg = ref(`url(${beliefs})`);
 
-const words = ["Love", "Peace", "Grace", "Mercy", "Abundance", "Longsuffering"]
-const phrase = ref(words[0])
-let prevIdx = 0
-let isChangingWord = false
+const words = ["Love", "Peace", "Grace", "Mercy", "Abundance", "Longsuffering"];
+const phrase = ref(words[0]);
+let prevIdx = 0;
+let isChangingWord = false;
 
 const wordLoop = setInterval(async () => {
   if (!isChangingWord) {
-    isChangingWord = true
-    let newWord = ""
+    isChangingWord = true;
+    let newWord = "";
     // delete current word
     for (let i = phrase.value.length; i >= 0; i--) {
-      phrase.value = phrase.value.substring(0, i)
+      phrase.value = phrase.value.substring(0, i);
       await new Promise((r) => {
         setTimeout(() => {
-          r()
-        }, 125)
-      })
+          r();
+        }, 125);
+      });
     }
     // find new word
     while (true) {
-      let newIdx = Math.floor(Math.random() * words.length)
-      newWord = words[newIdx]
+      let newIdx = Math.floor(Math.random() * words.length);
+      newWord = words[newIdx];
       if (newIdx != prevIdx) {
-        prevIdx = newIdx
-        newWord = words[newIdx]
-        break
+        prevIdx = newIdx;
+        newWord = words[newIdx];
+        break;
       }
     }
     // wait
     await new Promise((r) => {
       setTimeout(() => {
-        r()
-      }, 1000)
-    })
+        r();
+      }, 1000);
+    });
     // type new word
     for (let i = 0; i <= newWord.length; i++) {
-      phrase.value = newWord.substring(0, i)
+      phrase.value = newWord.substring(0, i);
       await new Promise((r) => {
         setTimeout(() => {
-          r()
-        }, 75)
-      })
+          r();
+        }, 75);
+      });
     }
     // wait
     await new Promise((r) => {
       setTimeout(() => {
-        r()
-      }, 2000)
-    })
-    isChangingWord = false
+        r();
+      }, 2000);
+    });
+    isChangingWord = false;
   }
-}, 2000)
+}, 2000);
 
 onUnmounted(() => {
-  window.clearInterval(wordLoop)
-})
+  window.clearInterval(wordLoop);
+});
 </script>
 
 <style scoped>
@@ -230,7 +239,6 @@ onUnmounted(() => {
   justify-content: center;
   margin: auto 0;
   position: relative;
-  overflow: hidden;
   transition: transform 300ms ease-in-out;
   border-radius: 5px;
 }
@@ -248,6 +256,8 @@ onUnmounted(() => {
   transition: transform 300ms ease-in-out;
   max-height: 500px;
   border-radius: 5px;
+  box-shadow: 5px 9px 0px 1px #7c1c4552;
+  outline: 2px solid #000000;
 }
 
 img.resize {
@@ -407,9 +417,9 @@ img.resize {
   transition: 200ms ease-in;
 }
 
-.btn i,
-.btn-x i,
-.btn-y i {
+.btn svg,
+.btn-x svg,
+.btn-y svg {
   opacity: 0;
   transition: 100ms ease-in;
   width: 0;
@@ -419,16 +429,16 @@ img.resize {
   background-color: #924264;
 }
 
-.btn:hover i,
-.btn-x:hover i,
-.btn-y:hover i {
+.btn:hover svg,
+.btn-x:hover svg,
+.btn-y:hover svg {
   opacity: 1;
   margin-left: 10px;
+  width: unset;
 }
 
 .slogan {
   font-size: var(--size-7);
-  font-style: italic;
   font-weight: bold;
   color: #102a43;
   margin-bottom: 1em;
@@ -470,7 +480,8 @@ img.resize {
   align-items: center;
   background-color: #f5f7ff;
   max-width: 100%;
-  padding: var(--size-fluid-3);
+  gap: var(--size-2);
+  padding: var(--size-fluid-7) var(--size-fluid-3);
 }
 
 .scripture-section {
@@ -515,6 +526,8 @@ img.resize {
   max-width: 700px;
   cursor: pointer;
   overflow: hidden;
+  box-shadow: 5px 9px 0px 1px #7c1c4552;
+  outline: 2px solid #000000;
 }
 
 .card-hdr {
@@ -618,9 +631,9 @@ img.resize {
     margin: 0 0 1rem 0;
   }
 
-  .btn-x i,
-  .btn-y i,
-  .btn i {
+  .btn-x svg,
+  .btn-y svg,
+  .btn svg {
     display: none;
   }
 }

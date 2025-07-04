@@ -1,5 +1,5 @@
 <template>
-  <div class="section-1" :style="{ backgroundImage: backgroundImg }">
+  <div class="section-1">
     <div class="overlay"></div>
     <div class="a">Directions</div>
     <span style="color: white; padding-bottom: 5rem; z-index: 2"
@@ -39,17 +39,29 @@
     </div>
     <div class="marker-wrapper">
       <div class="marker">
-        <i class="fa fa-map-marker-alt"></i>
+        <FontAwesomeIcon :icon="faMapMarkerAlt" />
       </div>
     </div>
     <div class="map">
       <div class="map-desc">Service begins Sunday @ 10:30am est.</div>
+      <div class="map-desc">
+        First time Visitor?
+        <a
+          @click="navigateToLink('/visitors')"
+          style="
+            color: #0078ff;
+            cursor: pointer;
+            transition: 200ms ease-in;
+            text-decoration: underline;
+          "
+          >Click Here.</a
+        >
+      </div>
       <iframe
         src="https://maps.google.com/maps?q=5350+Denlinger+Road,+Trotwood,+OH,+USA&output=embed"
         width="100%"
-        height="450"
+        style="aspect-ratio: 1; border: 0"
         frameborder="0"
-        style="border: 0"
         allowfullscreen
       ></iframe>
     </div>
@@ -58,16 +70,18 @@
 </template>
 
 <script setup>
-import Footer from "../layout/Footer.vue"
-import { ref } from "vue"
-import background from "../../assets/background_color.png"
-import { useRouter } from "vue-router"
+import Footer from "../layout/Footer.vue";
+import { ref } from "vue";
+import background from "../../assets/background_color.png";
+import { useRouter } from "vue-router";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
-const backgroundImg = ref(`url(${background})`)
-const router = useRouter()
+const backgroundImg = ref(`url(${background})`);
+const router = useRouter();
 
 function navigateToLink(pathname) {
-  router.push(pathname)
+  router.push(pathname);
 }
 </script>
 
@@ -94,6 +108,7 @@ function navigateToLink(pathname) {
   display: flex;
   flex-direction: column;
   padding: clamp(1rem, calc(5vw + 1rem), 2rem);
+  width: min(100%, 1200px);
 }
 
 .a {
@@ -154,7 +169,7 @@ li {
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 1;
   background-image: linear-gradient(#6b0e3a, #793354);
 }
 

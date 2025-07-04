@@ -1,51 +1,55 @@
 <template>
   <div class="section-1" :style="{ backgroundImage: churchImg }">
     <div class="overlay"></div>
-    <div class="a">Learn More About New Destiny Ministries</div>
-    <button
-      class="btn b-main ease-left-animation"
-      @click="navigateToLink('leadership')"
-    >
-      <span style="margin-right: 10px">Leadership</span>
-      <i class="fa fa-long-arrow-alt-right"></i>
-    </button>
-    <button
-      class="btn b-sub ease-left-animation"
-      @click="navigateToLink('framework')"
-    >
-      <span style="margin-right: 10px">Framework</span>
-      <i class="fa fa-project-diagram"></i>
-    </button>
-    <button
-      class="btn b-sub ease-right-animation"
-      @click="navigateToLink('beliefs')"
-    >
-      <span style="margin-right: 10px">Beliefs</span>
-      <i class="fa fa-long-arrow-alt-right"></i>
-    </button>
-    <button
-      class="btn b-sub ease-left-animation"
-      @click="navigateToLink('directions')"
-    >
-      <span style="margin-right: 10px">Directions</span>
-      <i class="fa fa-directions"></i>
-    </button>
+    <div class="about-container">
+      <div class="about-title">Learn More About New Destiny Ministries</div>
+      <div class="about-cards-container">
+        <AboutCard
+          title="Leadership"
+          description="Meet the ministry leaders who serve with humility and vision. Our leadership team is dedicated to shepherding the church with integrity, wisdom, and a heart for people."
+          path="leadership"
+          delayms="0ms"
+          :icondef="faBookOpenReader"
+        />
+        <AboutCard
+          title="Framework"
+          description="Explore the foundational structure that shapes our church community. From worship and discipleship to outreach and service, our framework reflects a commitment to living out the Gospel in every area of life."
+          path="framework"
+          delayms="150ms"
+          :icondef="faShapes"
+        />
+        <AboutCard
+          title="Beliefs"
+          description="Our faith is anchored in the truth of Scripture and the life, death, and resurrection of Jesus Christ. Learn more about the core doctrines and convictions that guide our teaching, worship, and mission."
+          path="beliefs"
+          delayms="350ms"
+          :icondef="faCross"
+        />
+        <AboutCard
+          title="Directions"
+          description="Looking to get involved or visit us for the first time? Find clear guidance on where we’re located, how to connect, and what to expect when you walk through our doors."
+          path="directions"
+          delayms="500ms"
+          :icondef="faCompass"
+        />
+      </div>
+    </div>
   </div>
   <Footer />
 </template>
 
 <script setup>
-import { ref } from "vue"
-import { useRouter } from "vue-router"
-import Footer from "../layout/Footer.vue"
-import church from "../../assets/church.jpg"
-
-const churchImg = ref(`url(${church})`)
-const router = useRouter()
-
-function navigateToLink(pathname) {
-  router.push(pathname)
-}
+import { ref } from "vue";
+import Footer from "../layout/Footer.vue";
+import AboutCard from "../AboutCard.vue";
+import church from "../../assets/church.jpg";
+import {
+  faBookOpenReader,
+  faCompass,
+  faCross,
+  faShapes,
+} from "@fortawesome/free-solid-svg-icons";
+const churchImg = ref(`url(${church})`);
 </script>
 
 <style scoped>
@@ -61,48 +65,37 @@ function navigateToLink(pathname) {
   background-size: cover;
 }
 
-.a {
-  margin-top: 3rem;
-  margin-bottom: var(--size-fluid-1);
-  max-width: 20ch;
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  gap: var(--size-7);
+  height: 100%;
+  padding: var(--size-8);
+  width: min(100%, 1200px);
+}
+
+.about-title {
   color: white;
   text-align: center;
   font-size: var(--font-size-fluid-3);
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: var(--font-letterspacing-1);
-  padding: 0 var(--size-fluid-2);
   position: relative;
   animation-name: fade-white;
   animation-timing-function: ease;
   animation-duration: 1s;
+  flex: 1;
 }
 
-.a-sub {
-  display: flex;
-  justify-content: center;
-  padding: 0 2rem;
-  text-align: center;
-  font-size: 1.5rem;
-  position: relative;
-}
-
-.a-sub span {
-  font-weight: 300;
-  position: relative;
-  color: white;
-}
-
-.a-sub span:last-child:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.about-cards-container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--size-4);
   width: 100%;
-  border-radius: 2px;
-  height: 0.4em;
-  background-color: #dbaccf;
-  opacity: 0.25;
 }
 
 .overlay {
@@ -110,87 +103,18 @@ function navigateToLink(pathname) {
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 0.95;
   background-image: linear-gradient(#533c4d, #364259);
 }
 
-.ease-left-animation {
-  animation-name: ease-left;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  animation-duration: 1s;
-}
-
-.ease-right-animation {
-  animation-name: ease-right;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  animation-duration: 1s;
-}
-
-@keyframes ease-left {
+@keyframes fade-white {
   from {
-    opacity: 0;
-    left: 3rem;
+    color: transparent;
+    top: 5vh;
   }
   to {
-    opacity: 1;
-    left: 0;
+    color: white;
+    top: 0;
   }
-}
-
-@keyframes ease-right {
-  from {
-    opacity: 0;
-    right: 3rem;
-  }
-  to {
-    opacity: 1;
-    right: 0;
-  }
-}
-
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  outline: none;
-  border: 1.5px solid;
-  border-radius: 2px;
-  margin-top: 2rem;
-  padding: 0.75rem 2rem;
-  font-size: 0.8rem;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 200ms ease-in;
-  min-width: 10rem;
-}
-
-.btn:last-child {
-  margin-bottom: 10rem;
-}
-
-.b-main {
-  border-color: #b44b7c;
-  background-color: #b44b7c;
-  color: white;
-}
-
-.b-main:hover {
-  background-color: transparent;
-  border-color: white;
-}
-
-.b-sub {
-  border-color: #cacaca;
-  background-color: white;
-  color: black;
-}
-
-.b-sub:hover {
-  border-color: #cacaca;
-  background-color: transparent;
-  color: white;
 }
 </style>
