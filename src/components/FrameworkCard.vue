@@ -44,7 +44,10 @@
         >
       </div>
       <div style="display: flex; flex-direction: column; gap: var(--size-4)">
-        <FontAwesomeIcon :icon="props.midicondef" />
+        <FontAwesomeIcon
+          :icon="props.midicondef"
+          :style="{ color: props.pcolor }"
+        />
         <span
           style="font-weight: var(--font-weight-8)"
           :style="{ color: props.pcolor }"

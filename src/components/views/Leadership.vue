@@ -192,7 +192,6 @@ onMounted(() => {
   height: auto;
   width: 100%;
   transition: transform 300ms ease-in-out;
-  max-height: 300px;
   border-radius: 5px;
 }
 
