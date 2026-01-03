@@ -11,7 +11,7 @@
     <button class="ml-link" @click="navigateToLink('giving')">Giving</button>
     <button class="ml-link" @click="navigateToLink('events')">Events</button>
     <!-- <button class="ml-link" @click="navigateToLink('livestream')">Live</button> -->
-    <div class="ml-link-footer">© 2025 New Destiny Ministries</div>
+    <div class="ml-link-footer">© 2026 New Destiny Ministries</div>
     <div class="ml-link-footer" style="color: #9f9f9f">#ndmstrong</div>
   </div>
 </template>

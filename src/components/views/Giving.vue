@@ -68,11 +68,13 @@
         <div class="give-b">
           <div>
             <FontAwesomeIcon :icon="faCheck" class="check-icon" />
-            <span>Give via </span>
-            <a href="https://cash.app/$NDMDayton1" class="g-link">Cash App</a>
+            <a href="https://cash.app/$NDMDayton1" class="g-link"
+              >Click Here to give via Cash App
+            </a>
             <span>
-              or by searching "NDMDayton1" inside the mobile CashApp
-              application.</span
+              <b>or</b> by searching "NDMDayton1" inside the mobile CashApp
+              application. Please take a moment to ensure your donations are
+              being sent to <b>$NDMDayton1</b>.</span
             >
           </div>
           <div>
@@ -93,8 +95,13 @@
         <div class="give-b">
           <div>
             <FontAwesomeIcon :icon="faCheck" class="check-icon" />
-            <span>Give via </span>
-            <a href="https://paypal.me/ndmdayton" class="g-link">PayPal</a>
+            <a href="https://paypal.me/ndmdayton" class="g-link"
+              >Click here to Give via PayPal</a
+            >
+            <span
+              >. Please take a moment to ensure your donations are being sent to
+              <b>@ndmdayton</b>.</span
+            >
           </div>
           <div>
             <FontAwesomeIcon :icon="faCheck" class="check-icon" />

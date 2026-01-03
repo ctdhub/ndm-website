@@ -39,15 +39,15 @@
     </div>
     <div class="scripture-container">
       <div class="scripture-section">
-        <div class="slogan">"Equipped for Every Good Work"</div>
+        <div class="slogan">"From Milk to Meat"</div>
         <div class="give-scrip">
-          <sup>16</sup>All Scripture is given by inspiration of God, and is
-          profitable for doctrine, for reproof, for correction, for instruction
-          in righteousness, <sup>17</sup>that the man of God may be complete,
-          thoroughly <em><b>equipped for every good work</b></em
-          >.
+          <sup>13</sup>For everyone who partakes only of milk is unskilled in
+          the word of righteousness, for he is a babe. <sup>14</sup>But solid
+          food belongs to those who are of full age, that is, those who by
+          reason of use have their senses exercised to discern both good and
+          evil.
         </div>
-        <div class="scrip-f">2 Timothy 3:16-17</div>
+        <div class="scrip-f">Hebrews 5:13-14</div>
         <div class="scrip-v">NKJV</div>
       </div>
       <div class="img-container ease-up-animation scripture-section">
@@ -65,8 +65,7 @@
         <div class="overlay-gradient"></div>
         <div
           class="overlay-image img-3"
-          :style="{ backgroundImage: beliefsImg }"
-        ></div>
+          :style="{ backgroundImage: beliefsImg }"></div>
         <FontAwesomeIcon :icon="faBible" class="card-icon" />
         <div class="card-hdr">Our Beliefs</div>
         <div class="card-desc">
@@ -84,8 +83,7 @@
             margin-top: auto;
             z-index: 3;
             color: white;
-          "
-        >
+          ">
           <span>Learn More</span>
           <FontAwesomeIcon :icon="faArrowRight" />
         </button>
@@ -94,8 +92,7 @@
         <div class="overlay-gradient"></div>
         <div
           class="overlay-image img-2"
-          :style="{ backgroundImage: visitorsImg }"
-        ></div>
+          :style="{ backgroundImage: visitorsImg }"></div>
         <FontAwesomeIcon :icon="faUserFriends" class="card-icon" />
         <div class="card-hdr">Visitors</div>
         <div class="card-desc">
@@ -113,8 +110,7 @@
             margin-top: auto;
             z-index: 3;
             color: white;
-          "
-        >
+          ">
           <span>Learn More</span>
           <FontAwesomeIcon :icon="faArrowRight" />
         </button>
@@ -123,8 +119,7 @@
         <div class="overlay-gradient"></div>
         <div
           class="overlay-image img-1"
-          :style="{ backgroundImage: givingImg }"
-        ></div>
+          :style="{ backgroundImage: givingImg }"></div>
         <FontAwesomeIcon :icon="faDonate" class="card-icon" />
         <div class="card-hdr">How to Give</div>
         <div class="card-desc">
@@ -143,8 +138,7 @@
             margin-top: auto;
             z-index: 3;
             color: white;
-          "
-        >
+          ">
           <span>Learn More</span>
           <FontAwesomeIcon :icon="faArrowRight" />
         </button>
@@ -308,6 +302,7 @@ onUnmounted(() => {
   transition: transform 300ms ease-in-out;
   border-radius: 5px;
   width: 100%;
+  max-width: 400px;
 }
 
 img.resize {
@@ -502,7 +497,7 @@ img.resize {
 }
 
 .give-scrip > sup {
-  font-size: var(--size-2);
+  font-size: var(--size-3);
 }
 
 .give-quote {

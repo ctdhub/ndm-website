@@ -193,6 +193,7 @@ onMounted(() => {
   width: 100%;
   transition: transform 300ms ease-in-out;
   border-radius: 5px;
+  max-width: 400px;
 }
 
 .bio-name {

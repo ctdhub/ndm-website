@@ -6,8 +6,7 @@
         margin-bottom: var(--size-8);
         font-weight: var(--font-weight-8);
         font-size: var(--font-size-3);
-      "
-    >
+      ">
       Service Times (Eastern Time)
     </div>
     <div class="service-times" style="margin-bottom: var(--size-4)">
@@ -34,13 +33,12 @@
       <FontAwesomeIcon
         :icon="faLocationDot"
         class="fb-icon"
-        @click="gotoFacebook"
-      />
+        @click="gotoFacebook" />
       5350 Denlinger Road - Dayton, OH 45426
     </div>
   </div>
   <div class="cpyr">
-    <span>© 2025 New Destiny Ministries</span>
+    <span>© 2026 New Destiny Ministries</span>
     <span style="color: #9f9f9f">#ndmstrong</span>
     <FontAwesomeIcon :icon="faFacebook" class="fb-icon" @click="gotoFacebook" />
   </div>
