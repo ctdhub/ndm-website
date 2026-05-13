@@ -11,7 +11,7 @@
       <div class="head" style="background-color: aliceblue">God</div>
       <div class="details">
         There is one God, Creator of all things, infinitely perfect, and
-        eternally existing in three Persons: Father, Son, and Holy Spirit.
+        eternally existing in three manifestations: Father, Son and Holy Spirit.
       </div>
     </div>
     <div class="b-container">
